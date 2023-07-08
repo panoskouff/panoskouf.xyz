@@ -1,0 +1,29 @@
+.buttonLinkContainer {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px var(--text-color-primary);
+  transform: translate(11px, 11px);
+  color: white;
+  font-size: 18px;
+}
+
+.buttonLink {
+  line-height: 25px;
+  border: 3px solid var(--text-color-primary);
+  min-width: 200px;
+  padding: 11px 32px 12px;
+  border-radius: 5px;
+  background: var(--text-color-primary);
+  box-shadow: 0 0 0 3px var(--text-color-primary);
+  text-align: center;
+  transform: translate3d(-8px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transition-duration: 0.2s;
+  transform-style: preserve-3d;
+}
+
+.buttonLink:hover {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transition-duration: 0.2s;
+}

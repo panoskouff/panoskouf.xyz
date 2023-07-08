@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+  /* use flex column so .hero can get the rest height of the viewport */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.bgViewportCover {
+  position: absolute;
+  z-index: -1;
+  background: var(--bg-color-primary);
+  inset: var(--bg-viewport-cover-inset);
+  border-radius: var(--border-radius-primary);
+  height: calc(100% - (var(--bg-viewport-cover-inset) * 2));
+}
+
+.sectionWrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1424px) {
+  .sectionWrapper {
+    padding: 0 var(--section-x-offset);
+  }
+}
+
+.section {
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: var(--section-max-width);
+  /* background-color: rgba(0, 255, 255, 0.485); */
+  /* for scroll line */
+  position: relative;
+}
+
+.spaceTopOffset {
+  height: var(--bg-viewport-cover-inset);
+}
+
+.hero {
+  flex-grow: 1;
+}
+
+@keyframes moveAnimationIn {
+  0% {
+    transform: translate3d(0, -110px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0px, 0);
+  }
+}
+
+@keyframes moveAnimationOut {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0, 110px, 0);
+  }
+}
+
+@keyframes moveAnimation {
+  0% {
+    transform: translate3d(0, -110px, 0);
+  }
+  20% {
+    transform: translate3d(0, 0px, 0);
+  }
+  80% {
+    transform: translate3d(0, 0px, 0);
+  }
+  100% {
+    transform: translate3d(0, 110px, 0);
+  }
+}
+
+.scrollLineBlock {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  display: inline-block;
+  overflow: hidden;
+  width: 46px;
+  height: 105px;
+}
+
+.scrollLineArrow {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  display: inline-block;
+  width: 2px;
+  height: 105px;
+  background-color: #000;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  animation: moveAnimation 4s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1s infinite;
+}
+/* style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></div> */
+.scrollLineText {
+  position: absolute;
+  left: 46px;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  display: inline-block;
+  -webkit-transform: perspective(0px) rotate(90deg);
+  transform: perspective(0px) rotate(90deg);
+  -webkit-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  font-weight: 700;
+  text-transform: uppercase;
+}

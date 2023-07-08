@@ -1,0 +1,17 @@
+.aspectRatioBox {
+  position: relative;
+  height: 0;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* option to center image
+  maybe with a default background ?
+  however it looks crap */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
