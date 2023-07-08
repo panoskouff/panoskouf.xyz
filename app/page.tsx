@@ -5,6 +5,7 @@ import ButtonLink from '#/atoms/ButtonLink/ButtonLink';
 import Space from '#/atoms/Space/Space';
 import { Navigation } from '#/components/Navigation/Navigation';
 import Text from '#/atoms/Text/Text';
+import { ScrollIndicator } from '#/components/ScrollIndicator/ScrollIndicator';
 
 const expanded = { height: '100%' };
 
@@ -41,9 +42,8 @@ export default function Home() {
               <ButtonLink>see my work</ButtonLink>
             </div>
           </div>
-          <div className={s.scrollLineBlock}>
-            <div className={s.scrollLineArrow}></div>
-            <div className={s.scrollLineText}>scroll</div>
+          <div className={s.positionForScrollIndicator}>
+            <ScrollIndicator />
           </div>
         </div>
       </div>
