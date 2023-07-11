@@ -1,11 +1,10 @@
 import s from './page.module.css';
 
 // @todo fix imports
-import ButtonLink from '#/atoms/ButtonLink/ButtonLink';
-import Space from '#/atoms/Space/Space';
+import { ButtonLink, Space, Text } from '#/atoms';
 import { Navigation } from '#/components/Navigation/Navigation';
-import Text from '#/atoms/Text/Text';
 import { ScrollIndicator } from '#/components/ScrollIndicator/ScrollIndicator';
+import ProjectHighlightCard from '#/components/ProjectHighlightCard/ProjectHighlightCard';
 
 const expanded = { height: '100%' };
 
@@ -45,6 +44,15 @@ export default function Home() {
           <div className={s.positionForScrollIndicator}>
             <ScrollIndicator />
           </div>
+        </div>
+        <div className={s.section}>
+          <ProjectHighlightCard
+            caption='Latest Work'
+            title='Modular Personal Website'
+            description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
+            projectUrl='https://www.google.com'
+            imageUrl='https://placeholder.com/150'
+          />
         </div>
       </div>
     </div>

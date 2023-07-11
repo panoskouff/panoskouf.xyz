@@ -1,7 +1,7 @@
 .text {
   display: inline-block;
   color: var(--text-color-primary);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .text-body {
@@ -21,13 +21,21 @@
 .text-title {
   line-height: 120%;
   font-size: 7vh;
-  font-weight: 400;
 }
 
 .text-title-secondary {
   line-height: 120%;
   font-size: 5.5vh;
-  font-weight: 400;
+}
+
+.text-caption {
+  color: var(--text-color-tertiary);
+  font-size: 14px;
+  line-height: 110%;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 767px) {

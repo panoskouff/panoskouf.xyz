@@ -4,7 +4,7 @@ type SpaceProps = {
   sp?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export const Positioned: React.FC<SpaceProps> = ({
+export const Space: React.FC<SpaceProps> = ({
   children,
   sp = 'md',
   ...rest
@@ -13,5 +13,3 @@ export const Positioned: React.FC<SpaceProps> = ({
     {children}
   </div>
 );
-
-export default Positioned;

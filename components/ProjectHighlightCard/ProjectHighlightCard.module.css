@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+
+/* @todo fix these for mobile */
+.content {
+  width: 54%;
+  margin-right: 80px;
+  /* use flex so we the button is moved to the bottom position */
+  display: flex;
+  flex-direction: column;
+}
+
+.tagContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.description {
+  max-width: 480px;
+}
+
+.button {
+  margin-top: auto;
+}
+
+.imageContainer {
+  width: 46%;
+}

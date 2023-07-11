@@ -1,10 +1,15 @@
 .buttonLinkContainer {
   display: inline-block;
-  border-radius: 5px;
+  border-radius: var(--border-radius-secondary);
   box-shadow: 0 0 0 3px var(--text-color-primary);
   transform: translate(11px, 11px);
   color: white;
   font-size: 18px;
+  /* we need align-self otherwise it will
+    take 100% of width if in flex container  */
+  align-self: flex-start;
+  /* account for the transformation displacement effect */
+  margin-bottom: 10px;
 }
 
 .buttonLink {
@@ -12,7 +17,7 @@
   border: 3px solid var(--text-color-primary);
   min-width: 200px;
   padding: 11px 32px 12px;
-  border-radius: 5px;
+  border-radius: var(--border-radius-secondary);
   background: var(--text-color-primary);
   box-shadow: 0 0 0 3px var(--text-color-primary);
   text-align: center;

@@ -12,14 +12,14 @@ type TextElements = Pick<
 
 type Props = {
   as?: keyof TextElements;
-  variant?: 'inherit' | 'body' | 'title' | 'title-secondary';
+  variant?: 'inherit' | 'body' | 'title' | 'title-secondary' | 'caption';
   bold?: boolean;
   color?: string;
   children: React.ReactNode;
   style?: React.CSSProperties;
 } & React.HTMLAttributes<HTMLElement>;
 
-const Text: React.FC<Props> = ({
+export const Text: React.FC<Props> = ({
   as: Element = 'span',
   variant = 'inherit',
   bold = false,
@@ -50,5 +50,3 @@ const Text: React.FC<Props> = ({
     </Element>
   );
 };
-
-export default Text;
