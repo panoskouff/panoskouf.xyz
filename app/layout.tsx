@@ -1,3 +1,4 @@
+import '../styles/index.css';
 import '../styles/css-reset.css';
 import '../styles/theme.css';
 import '../styles/globals.css';
