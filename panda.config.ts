@@ -16,6 +16,16 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
+    tokens: {
+      colors: {
+        'bg-color-primary': { value: '#fff' },
+        'bg-color-secondary': { value: '#f9f3e7' },
+        'text-color-logo': { value: '#333' },
+        'text-color-primary': { value: '#000' },
+        'text-color-secondary': { value: '#222' },
+        'text-color-tertiary': { value: '#b7b4b9' },
+      },
+    },
     extend: {},
   },
 

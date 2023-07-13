@@ -1,18 +1,35 @@
+import { PandaComponentProps } from '#/types';
 import { styled } from '../styled-system/jsx';
 
 type PositionedProps = PandaComponentProps<
   'div',
-  // @todo check shorthand syntax for properties and maybe use these
-  'top' | 'right' | 'bottom' | 'left' | 'inset' | 'position' | 'css'
+  | 'pos'
+  | 'top'
+  | 'right'
+  | 'bottom'
+  | 'left'
+  | 'insetStart'
+  | 'insetEnd'
+  | 'css'
 >;
 
 export const Positioned: React.FC<PositionedProps> = ({
+  pos = 'absolute',
+  top = 0,
+  right = 0,
+  bottom = 0,
+  left = 0,
   children,
-  inset = 0,
-  position = 'absolute',
   ...rest
 }) => (
-  <styled.div position={position} inset={inset} {...rest}>
+  <styled.div
+    pos={pos}
+    top={top}
+    right={right}
+    bottom={bottom}
+    left={left}
+    {...rest}
+  >
     {children}
   </styled.div>
 );
