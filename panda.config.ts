@@ -25,6 +25,18 @@ export default defineConfig({
         'text-color-secondary': { value: '#222' },
         'text-color-tertiary': { value: '#b7b4b9' },
       },
+      sizes: {
+        'section-max-width': { value: '1300px' },
+        // spacings need to be here because we use them in width and height properties
+        'spacing-xs': { value: '10px' },
+        'spacing-sm': { value: '20px' },
+        'spacing-md': { value: '32px' },
+        'spacing-lg': { value: '64px' },
+        'spacing-xl': { value: '128px' },
+      },
+      spacing: {
+        'section-offset': { value: '68px' },
+      },
     },
     extend: {},
   },

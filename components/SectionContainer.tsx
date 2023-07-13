@@ -16,9 +16,8 @@ export type SectionContainerProps = FlexProps &
  */
 export const SectionContainer: React.FC<SectionContainerProps> = ({
   justifyContent = 'center',
-  // @todo use tokens from panda config
-  maxW = '1300px',
-  px = '68px',
+  maxW = 'section-max-width',
+  px = 'section-offset',
   children,
   ...rest
 }) => (

@@ -35,7 +35,12 @@ export default function Home() {
                   <HeroHighlightIntro />
                 </Flex>
                 {/* @todo 68px is pageContents padding should be a token */}
-                <Positioned left='auto' top='auto' right='68px' bottom='-14px'>
+                <Positioned
+                  left='auto'
+                  top='auto'
+                  right='section-offset'
+                  bottom='-14px'
+                >
                   <ScrollIndicator />
                 </Positioned>
               </SectionContainer>
@@ -44,6 +49,7 @@ export default function Home() {
         </Positioned>
       </Flex>
       <SectionContainer css={{ height: '100%', pos: 'relative' }}>
+        <div>test</div>
         <ViewportSpotlight>
           <ProjectHighlightCard
             caption='Latest Work'
