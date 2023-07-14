@@ -26,22 +26,19 @@ export default function Home() {
               rounded='16px'
               css={{ height: '100%' }}
             >
-              <SectionContainer css={{ height: '100%', pos: 'relative' }}>
-                {/* looks like I dont need flex, just the height */}
-                <Flex flexDirection='column' css={{ height: '100%' }}>
+              <SectionContainer css={{ height: '100%' }}>
+                <Positioned pos='relative' css={{ height: '100%' }}>
+                  {/* looks like I dont need flex, just the height */}
+                  {/* <Flex flexDirection='column' css={{ height: '100%' }}> */}
                   <Space />
                   <Navigation />
                   <styled.div height='15vh' />
                   <HeroHighlightIntro />
-                </Flex>
-                {/* @todo 68px is pageContents padding should be a token */}
-                <Positioned
-                  left='auto'
-                  top='auto'
-                  right='section-offset'
-                  bottom='-14px'
-                >
-                  <ScrollIndicator />
+                  {/* </Flex> */}
+                  {/* @todo 68px is pageContents padding should be a token */}
+                  <Positioned left='auto' top='auto' right='0' bottom='-14px'>
+                    <ScrollIndicator />
+                  </Positioned>
                 </Positioned>
               </SectionContainer>
             </Background>
