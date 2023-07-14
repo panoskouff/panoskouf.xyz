@@ -34,11 +34,11 @@ export const ProjectHighlightCard: React.FC<Props> = ({
   return (
     <div className={s.container}>
       <div className={s.content}>
-        <Text as='h4' variant='caption'>
+        <Text as='h4' textStyle='caption' color='text-color-tertiary'>
           {caption}
         </Text>
         <Space h='sp-xs' />
-        <Text as='h2' variant='title-secondary'>
+        <Text as='h2' textStyle='title-secondary'>
           {title}
         </Text>
         <Space h='sp-sm' />
@@ -49,11 +49,10 @@ export const ProjectHighlightCard: React.FC<Props> = ({
         </div>
         <Space h='sp-md' />
         <Space h='sp-xs' />
-        <Text as='p' variant='body' className={s.description}>
+        <Text as='p' textStyle='body' css={{ maxW: '480px' }}>
           {description}
         </Text>
         <ButtonLink className={s.button}>View Project</ButtonLink>
-        {/* <div className={s.buttonContainer}> */}
       </div>
       <div className={s.imageContainer}>
         <AspectRatioImage

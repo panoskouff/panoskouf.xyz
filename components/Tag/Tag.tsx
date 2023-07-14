@@ -20,7 +20,12 @@ export const Tag: React.FC<Props> = ({
   return (
     <div className={clsx(s.container, className)} {...rest}>
       {text ? (
-        <Text className={s.text} bold>
+        <Text
+          fontWeight='700'
+          fontSize='13px'
+          lineHeight='13px'
+          css={{ p: '6px 10px' }}
+        >
           {text}
         </Text>
       ) : (

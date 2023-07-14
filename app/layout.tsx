@@ -2,7 +2,7 @@ import '../styles/index.css';
 import '../styles/css-reset.css';
 import '../styles/theme.css';
 import '../styles/globals.css';
-import { mulish } from '@/fonts';
+import { mulish, tinos } from '@/fonts';
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={`${mulish.variable} ${tinos.variable}`}>
       <body className={mulish.className}>{children}</body>
     </html>
   );

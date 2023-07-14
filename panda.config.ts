@@ -1,4 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
+import { textStyles } from './styles/text-styles';
 
 export default defineConfig({
   // Whether to use css reset
@@ -13,7 +14,17 @@ export default defineConfig({
   exclude: [],
 
   theme: {
+    breakpoints: {
+      sm: '480px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     tokens: {
+      fonts: {
+        mulish: { value: 'var(--mulish), sans-serif' },
+        tinos: { value: 'var(--tinos), serif' },
+      },
       colors: {
         'bg-color-primary': { value: '#fff' },
         'bg-color-secondary': { value: '#f9f3e7' },
@@ -35,7 +46,7 @@ export default defineConfig({
         'section-offset': { value: '30px' },
       },
     },
-    extend: {},
+    extend: { textStyles },
   },
 
   jsxFramework: 'react',

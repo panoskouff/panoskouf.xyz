@@ -25,6 +25,7 @@
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transition-duration: 0.2s;
   transform-style: preserve-3d;
+  color: #fff;
 }
 
 .buttonLink:hover {

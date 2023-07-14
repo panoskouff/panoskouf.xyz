@@ -1,6 +1,7 @@
 import { styled } from '../styled-system/jsx';
-import { Positioned, SpaceOld, Space } from '#/atoms';
-import { Flex, Text } from '#/atoms';
+import { Positioned, Space } from '#/atoms';
+import { Flex } from '#/atoms';
+import { Text as Text2 } from '#/atoms/Text';
 import Background from '#/atoms/Background';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
@@ -42,8 +43,6 @@ export default function Home() {
         </Positioned>
       </Flex>
       <SectionContainer css={{ height: '100%', pos: 'relative' }}>
-        <styled.div width='50px' h='5px' height='50px' bg='red' />
-
         <ViewportSpotlight>
           <ProjectHighlightCard
             caption='Latest Work'
