@@ -3,7 +3,7 @@ import type { PandaComponentProps } from '#/types';
 
 export type ViewportSpotlightProps = PandaComponentProps<
   'div',
-  'display' | 'h' | 'alignItems' | 'justifyContent' | 'css'
+  'justifyContent' | 'alignItems' | 'display' | 'h' | 'css'
 >;
 
 /**

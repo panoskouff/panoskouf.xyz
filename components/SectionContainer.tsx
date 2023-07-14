@@ -5,7 +5,7 @@ export type SectionContainerProps = FlexProps &
   Partial<Pick<HTMLStyledProps<'div'>, 'maxW' | 'px'>>;
 
 // @todo move a version of this in atoms and drop Container from there
-// @todo find a way to differentiate between maxWidth of of flex and div
+// @todo find a way to differentiate between maxWidth, pos of of flex and div
 /**
  * Wraps the section's content in a box, which is centered by default
  * and has it's width constrained.
@@ -27,3 +27,14 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
     </styled.div>
   </Flex>
 );
+
+/*
+if I want to set position for styled.div I can do
+<SectionContainer>
+  <Positioned pos='relative'>
+
+  issue:
+  or I could expose a prop for it but the name would have to
+  be pos or position because position and not positionForContent
+  or sth like that
+*/

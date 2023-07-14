@@ -10,11 +10,8 @@ export default defineConfig({
     './components/**/*.{ts,tsx,js,jsx}',
     './app/**/*.{ts,tsx,js,jsx}',
   ],
-
-  // Files to exclude
   exclude: [],
 
-  // Useful for theme customization
   theme: {
     tokens: {
       colors: {
@@ -28,14 +25,14 @@ export default defineConfig({
       sizes: {
         'section-max-width': { value: '1300px' },
         // spacings need to be here because we use them in width and height properties
-        'spacing-xs': { value: '10px' },
-        'spacing-sm': { value: '20px' },
-        'spacing-md': { value: '32px' },
-        'spacing-lg': { value: '64px' },
-        'spacing-xl': { value: '128px' },
+        'sp-xs': { value: '10px' },
+        'sp-sm': { value: '20px' },
+        'sp-md': { value: '32px' },
+        'sp-lg': { value: '64px' },
+        'sp-xl': { value: '128px' },
       },
       spacing: {
-        'section-offset': { value: '68px' },
+        'section-offset': { value: '30px' },
       },
     },
     extend: {},

@@ -1,5 +1,5 @@
 import { styled } from '../styled-system/jsx';
-import { Positioned, Space } from '#/atoms';
+import { Positioned, SpaceOld, Space } from '#/atoms';
 import { Flex, Text } from '#/atoms';
 import Background from '#/atoms/Background';
 import { Padding } from '#/atoms/Padding';
@@ -28,14 +28,10 @@ export default function Home() {
             >
               <SectionContainer css={{ height: '100%' }}>
                 <Positioned pos='relative' css={{ height: '100%' }}>
-                  {/* looks like I dont need flex, just the height */}
-                  {/* <Flex flexDirection='column' css={{ height: '100%' }}> */}
                   <Space />
                   <Navigation />
                   <styled.div height='15vh' />
                   <HeroHighlightIntro />
-                  {/* </Flex> */}
-                  {/* @todo 68px is pageContents padding should be a token */}
                   <Positioned left='auto' top='auto' right='0' bottom='-14px'>
                     <ScrollIndicator />
                   </Positioned>
@@ -46,7 +42,17 @@ export default function Home() {
         </Positioned>
       </Flex>
       <SectionContainer css={{ height: '100%', pos: 'relative' }}>
-        <div>test</div>
+        <styled.div width='50px' h='5px' height='50px' bg='red' />
+
+        <ViewportSpotlight>
+          <ProjectHighlightCard
+            caption='Latest Work'
+            title='Modular Personal Website'
+            description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
+            projectUrl='https://www.google.com'
+            imageUrl='https://placeholder.com/150'
+          />
+        </ViewportSpotlight>
         <ViewportSpotlight>
           <ProjectHighlightCard
             caption='Latest Work'

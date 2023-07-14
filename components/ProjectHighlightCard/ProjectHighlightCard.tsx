@@ -37,18 +37,18 @@ export const ProjectHighlightCard: React.FC<Props> = ({
         <Text as='h4' variant='caption'>
           {caption}
         </Text>
-        <Space sp='xs' />
+        <Space h='sp-xs' />
         <Text as='h2' variant='title-secondary'>
           {title}
         </Text>
-        <Space sp='sm' />
+        <Space h='sp-sm' />
         <div className={s.tagContainer}>
           {mockTags.map((tag) => (
             <Tag key={tag.id} text={tag.text} />
           ))}
         </div>
-        <Space sp='md' />
-        <Space sp='xs' />
+        <Space h='sp-md' />
+        <Space h='sp-xs' />
         <Text as='p' variant='body' className={s.description}>
           {description}
         </Text>
