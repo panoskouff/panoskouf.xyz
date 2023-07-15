@@ -1,5 +1,5 @@
 import { AspectRatioImage, ButtonLink, Space, Text } from '#/atoms';
-import { Tag } from '../Tag/Tag';
+import { Tag } from '../Tag';
 import s from './ProjectHighlightCard.module.css';
 
 type Props = {

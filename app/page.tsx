@@ -2,7 +2,7 @@ import { styled } from '../styled-system/jsx';
 import { Positioned, Space } from '#/atoms';
 import { Flex } from '#/atoms';
 import { Text as Text2 } from '#/atoms/Text';
-import Background from '#/atoms/Background';
+import { Background } from '#/atoms';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
 import { css } from '../styled-system/css';
@@ -15,23 +15,20 @@ import { ViewportSpotlight } from '#/atoms/ViewportSpotlight';
 export default function Home() {
   return (
     <>
-      <Flex
-        flexDirection='column'
-        css={{ position: 'relative', height: '100vh' }}
-      >
-        <Positioned pos='relative' css={{ minHeight: '100%' }}>
-          <Padding p='24px' css={{ height: '100%' }}>
+      <Flex flexDirection='column' css={{ pos: 'relative', h: '100vh' }}>
+        <Positioned pos='relative' css={{ minH: '100%' }}>
+          <Padding p='24px' css={{ h: '100%' }}>
             {/* @todo make background absolute so content can also flow above the bg cover ? */}
             <Background
               bg='bg-color-secondary'
               rounded='16px'
-              css={{ height: '100%' }}
+              css={{ h: '100%' }}
             >
-              <SectionContainer css={{ height: '100%' }}>
-                <Positioned pos='relative' css={{ height: '100%' }}>
+              <SectionContainer css={{ h: '100%' }}>
+                <Positioned pos='relative' css={{ h: '100%' }}>
                   <Space />
                   <Navigation />
-                  <styled.div height='15vh' />
+                  <styled.div h='15vh' />
                   <HeroHighlightIntro />
                   <Positioned left='auto' top='auto' right='0' bottom='-14px'>
                     <ScrollIndicator />
@@ -42,7 +39,7 @@ export default function Home() {
           </Padding>
         </Positioned>
       </Flex>
-      <SectionContainer css={{ height: '100%', pos: 'relative' }}>
+      <SectionContainer css={{ h: '100%', pos: 'relative' }}>
         <ViewportSpotlight>
           <ProjectHighlightCard
             caption='Latest Work'
@@ -62,7 +59,7 @@ export default function Home() {
           />
         </ViewportSpotlight>
       </SectionContainer>
-      {/* see if you need to wrap flex, move this outside and use height instead of minHeight */}
+      {/* see if you need to wrap flex, move this outside and use h instead of minHeight */}
       {/* <Padding p='24px'>
         <div>woot</div>
       </Padding> */}

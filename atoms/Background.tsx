@@ -1,7 +1,7 @@
 import { PandaComponentProps } from '#/types';
 import { styled } from '../styled-system/jsx';
 
-type BackgroundProps = PandaComponentProps<
+export type BackgroundProps = PandaComponentProps<
   'div',
   | 'bg'
   | 'backgroundColor'
@@ -22,5 +22,3 @@ export const Background: React.FC<BackgroundProps> = ({
   children,
   ...rest
 }) => <styled.div {...rest}>{children}</styled.div>;
-
-export default Background;

@@ -45,6 +45,10 @@ export default defineConfig({
       spacing: {
         'section-offset': { value: '30px' },
       },
+      radii: {
+        sm: { value: '5px' },
+        lg: { value: '16px' },
+      },
     },
     extend: { textStyles },
   },

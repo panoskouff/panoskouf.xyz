@@ -1,9 +1,0 @@
-.container {
-  background-color: var(--bg-color-primary);
-  border-radius: var(--border-radius-secondary);
-}
-
-.text {
-  padding: 6px 10px;
-  font-size: 13px;
-}
