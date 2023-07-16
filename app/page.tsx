@@ -1,6 +1,6 @@
 import { styled } from '../styled-system/jsx';
 import { Positioned, Space } from '#/atoms';
-import { Flex } from '#/atoms';
+import { Flex, Text } from '#/atoms';
 import { Background } from '#/atoms';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
@@ -10,6 +10,7 @@ import { HeroHighlightIntro } from '#/components/HeroHighlightIntro';
 import { ScrollIndicator } from '#/components/ScrollIndicator/ScrollIndicator';
 import { ProjectHighlightCard } from '#/components/ProjectHighlightCard';
 import { ViewportSpotlight } from '#/atoms/ViewportSpotlight';
+import { Footer } from '#/components/Footer';
 
 export default function Home() {
   return (
@@ -38,8 +39,8 @@ export default function Home() {
           </Padding>
         </Positioned>
       </Flex>
-      <SectionContainer css={{ h: '100%', pos: 'relative' }}>
-        <ViewportSpotlight>
+      <SectionContainer css={{ pos: 'relative' }}>
+        <ViewportSpotlight css={{ maxHeight: '100vh' }}>
           <ProjectHighlightCard
             caption='Latest Work'
             title='Modular Personal Website'
@@ -48,7 +49,7 @@ export default function Home() {
             imageUrl='https://placeholder.com/150'
           />
         </ViewportSpotlight>
-        <ViewportSpotlight>
+        <ViewportSpotlight css={{ maxHeight: '75vh' }}>
           <ProjectHighlightCard
             caption='Latest Work'
             title='Modular Personal Website'
@@ -58,6 +59,8 @@ export default function Home() {
           />
         </ViewportSpotlight>
       </SectionContainer>
+      <Space h='sp-xl' />
+      <Footer />
     </>
   );
 }
