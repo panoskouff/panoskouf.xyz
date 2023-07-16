@@ -40,27 +40,32 @@ export const ProjectHighlightCard: React.FC<Props> = ({
   children,
   ...rest
 }) => (
-  <Flex gap='80px' css={{ flexGrow: 1 }} {...rest}>
+  <Flex
+    gap='80px'
+    flexDirection={{ smToLg: 'column-reverse', lg: 'row' }}
+    css={{ flexGrow: 1 }}
+    {...rest}
+  >
     <Container w='54%' css={{ alignSelf: 'center' }}>
       <Text as='h4' textStyle='caption' color='text-color-tertiary'>
         {caption}
       </Text>
-      <Space h='sp-xs' />
+      <Space sz='sp-xs' />
       <Text as='h2' textStyle='title-secondary'>
         {title}
       </Text>
-      <Space h='sp-sm' />
+      <Space sz='sp-sm' />
       <Flex gap='16px'>
         {mockTags.map((tag) => (
           <Tag key={tag.id} text={tag.text} />
         ))}
       </Flex>
-      <Space h='sp-md' />
-      <Space h='sp-xs' />
+      <Space sz='sp-md' />
+      <Space sz='sp-xs' />
       <Text as='p' textStyle='body' css={{ maxW: '480px' }}>
         {description}
       </Text>
-      <Space h='sp-md' />
+      <Space sz='sp-md' />
       <ButtonLink>View Project</ButtonLink>
     </Container>
     <Container w='46%' css={{ alignSelf: 'center' }}>

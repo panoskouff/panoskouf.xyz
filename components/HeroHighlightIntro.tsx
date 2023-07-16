@@ -7,12 +7,12 @@ export const HeroHighlightIntro = () => (
       <br />
       Front End Engineer
     </Text>
-    <Space h='sp-sm' />
+    <Space sz='sp-sm' />
     <Text as='p' textStyle='body' css={{ maxWidth: 600 }}>
       I love everything TypeScript. Besides front end development, I am
       interested in Node.js, Ionic and BaaS. My favorite framework is React.
     </Text>
-    <Space h='sp-xs' />
+    <Space sz='sp-xs' />
     <Space />
     <ButtonLink>see my work</ButtonLink>
   </>

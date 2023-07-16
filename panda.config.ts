@@ -35,12 +35,6 @@ export default defineConfig({
       },
       sizes: {
         'section-max-width': { value: '1300px' },
-        // spacings need to be here because we use them in width and height properties
-        'sp-xs': { value: '10px' },
-        'sp-sm': { value: '20px' },
-        'sp-md': { value: '32px' },
-        'sp-lg': { value: '64px' },
-        'sp-xl': { value: '128px' },
       },
       spacing: {
         'section-offset': { value: '84px' },

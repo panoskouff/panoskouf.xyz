@@ -40,26 +40,28 @@ export default function Home() {
         </Positioned>
       </Flex>
       <SectionContainer css={{ pos: 'relative' }}>
-        <ViewportSpotlight css={{ maxHeight: '100vh' }}>
-          <ProjectHighlightCard
-            caption='Latest Work'
-            title='Modular Personal Website'
-            description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
-            projectUrl='https://www.google.com'
-            imageUrl='https://placeholder.com/150'
-          />
-        </ViewportSpotlight>
-        <ViewportSpotlight css={{ maxHeight: '75vh' }}>
-          <ProjectHighlightCard
-            caption='Latest Work'
-            title='Modular Personal Website'
-            description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
-            projectUrl='https://www.google.com'
-            imageUrl='https://placeholder.com/150'
-          />
-        </ViewportSpotlight>
+        <Space sz='sp-lg' />
+        <Space sz='sp-xl' />
+        {/* @todo replace viewport spotlights with xxxl spacings */}
+        <ProjectHighlightCard
+          caption='Latest Work'
+          title='Modular Personal Website'
+          description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
+          projectUrl='https://www.google.com'
+          imageUrl='https://placeholder.com/150'
+        />
+        <Space sz='sp-xl' />
+        <Space sz='sp-xl' />
+        <ProjectHighlightCard
+          caption='Latest Work'
+          title='Modular Personal Website'
+          description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
+          projectUrl='https://www.google.com'
+          imageUrl='https://placeholder.com/150'
+        />
+        <Space sz='sp-xl' />
       </SectionContainer>
-      <Space h='sp-xl' />
+
       <Footer />
     </>
   );
