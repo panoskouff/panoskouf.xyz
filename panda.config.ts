@@ -43,7 +43,7 @@ export default defineConfig({
         'sp-xl': { value: '128px' },
       },
       spacing: {
-        'section-offset': { value: '30px' },
+        'section-offset': { value: '84px' },
       },
       radii: {
         sm: { value: '5px' },
