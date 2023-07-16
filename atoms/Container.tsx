@@ -1,19 +1,11 @@
-import { PandaComponentProps } from '#/types';
 import { styled } from '#/styled-system/jsx';
+import type { PandaComponentProps } from '#/types';
 
 export type ContainerProps = PandaComponentProps<
   'div',
-  | 'width'
-  | 'minWidth'
-  | 'maxWidth'
-  | 'height'
-  | 'minHeight'
-  | 'maxHeight'
-  | 'css'
+  'w' | 'minW' | 'maxW' | 'h' | 'minH' | 'maxH' | 'css'
 >;
 
 export const Container: React.FC<ContainerProps> = ({ children, ...rest }) => (
   <styled.div {...rest}>{children}</styled.div>
 );
-
-export default Container;

@@ -1,7 +1,6 @@
 import { styled } from '../styled-system/jsx';
 import { Positioned, Space } from '#/atoms';
 import { Flex } from '#/atoms';
-import { Text as Text2 } from '#/atoms/Text';
 import { Background } from '#/atoms';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
@@ -9,7 +8,7 @@ import { css } from '../styled-system/css';
 import { Navigation } from '#/components/Navigation';
 import { HeroHighlightIntro } from '#/components/HeroHighlightIntro';
 import { ScrollIndicator } from '#/components/ScrollIndicator/ScrollIndicator';
-import ProjectHighlightCard from '#/components/ProjectHighlightCard/ProjectHighlightCard';
+import { ProjectHighlightCard } from '#/components/ProjectHighlightCard';
 import { ViewportSpotlight } from '#/atoms/ViewportSpotlight';
 
 export default function Home() {
@@ -59,10 +58,6 @@ export default function Home() {
           />
         </ViewportSpotlight>
       </SectionContainer>
-      {/* see if you need to wrap flex, move this outside and use h instead of minHeight */}
-      {/* <Padding p='24px'>
-        <div>woot</div>
-      </Padding> */}
     </>
   );
 }
