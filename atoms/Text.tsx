@@ -28,6 +28,7 @@ type Props = {
   | 'lineHeight'
   | 'lineClamp'
   | 'truncate'
+  | 'textTransform'
   | 'color'
 >;
 
@@ -43,6 +44,7 @@ export const Text: React.FC<Props> = ({
   lineHeight,
   lineClamp,
   truncate,
+  textTransform,
   css,
   children,
   ...rest
@@ -60,6 +62,7 @@ export const Text: React.FC<Props> = ({
         lineHeight,
         lineClamp,
         truncate,
+        textTransform,
         ...css,
       })
     )}
