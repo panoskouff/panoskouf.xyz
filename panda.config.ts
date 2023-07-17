@@ -44,6 +44,15 @@ export default defineConfig({
         lg: { value: '16px' },
       },
     },
+    semanticTokens: {
+      sizes: {
+        'sp-xs': { value: '10px' },
+        'sp-sm': { value: '20px' },
+        'sp-md': { value: '32px' },
+        'sp-lg': { value: '64px' },
+        'sp-xl': { value: { smToLg: '70px', lg: '140px' } },
+      },
+    },
     extend: { textStyles },
   },
 

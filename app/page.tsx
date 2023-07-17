@@ -40,8 +40,8 @@ export default function Home() {
         </Positioned>
       </Flex>
       <SectionContainer css={{ pos: 'relative' }}>
-        <Space sz='sp-lg' />
-        <Space sz='sp-xl' />
+        <Space h='sp-lg' />
+        <Space h='sp-xl' />
         {/* @todo replace viewport spotlights with xxxl spacings */}
         <ProjectHighlightCard
           caption='Latest Work'
@@ -50,8 +50,8 @@ export default function Home() {
           projectUrl='https://www.google.com'
           imageUrl='https://placeholder.com/150'
         />
-        <Space sz='sp-xl' />
-        <Space sz='sp-xl' />
+        <Space h='sp-xl' />
+        <Space h='sp-xl' />
         <ProjectHighlightCard
           caption='Latest Work'
           title='Modular Personal Website'
@@ -59,7 +59,7 @@ export default function Home() {
           projectUrl='https://www.google.com'
           imageUrl='https://placeholder.com/150'
         />
-        <Space sz='sp-xl' />
+        <Space h='sp-xl' />
       </SectionContainer>
 
       <Footer />
