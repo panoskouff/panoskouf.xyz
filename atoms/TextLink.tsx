@@ -15,16 +15,24 @@ const textLink = css({
   },
 });
 
-export type TextLinkProps = LinkProps &
-  React.AnchorHTMLAttributes<HTMLAnchorElement>;
+export type TextLinkProps = LinkProps & {
+  openInNewTab?: boolean;
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const TextLink = ({
   className,
   children,
   href,
+  openInNewTab = false,
   ...rest
 }: TextLinkProps) => (
-  <Link className={clsx(textLink, className)} href={href} {...rest}>
+  <Link
+    className={clsx(textLink, className)}
+    href={href}
+    target={openInNewTab ? '_blank' : undefined}
+    rel={openInNewTab ? 'noopener noreferrer' : undefined}
+    {...rest}
+  >
     {children}
   </Link>
 );
