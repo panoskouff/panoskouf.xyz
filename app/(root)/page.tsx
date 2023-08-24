@@ -1,10 +1,10 @@
-import { styled } from '../styled-system/jsx';
+import { styled } from '../../styled-system/jsx';
 import { Positioned, Space } from '#/atoms';
 import { Flex, Text } from '#/atoms';
 import { Background } from '#/atoms';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
-import { css } from '../styled-system/css';
+import { css } from '../../styled-system/css';
 import { Navigation } from '#/components/Navigation';
 import { HeroHighlightIntro } from '#/components/HeroHighlightIntro';
 import { ScrollIndicator } from '#/components/ScrollIndicator/ScrollIndicator';
