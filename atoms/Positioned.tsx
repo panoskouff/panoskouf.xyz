@@ -33,5 +33,3 @@ export const Positioned: React.FC<PositionedProps> = ({
     {children}
   </styled.div>
 );
-
-export default Positioned;

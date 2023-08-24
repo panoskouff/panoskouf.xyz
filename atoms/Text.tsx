@@ -32,6 +32,7 @@ type Props = {
   | 'color'
 >;
 
+// @todo solve import issue or rename component
 export const Text: React.FC<Props> = ({
   as: Element = 'span',
   className,

@@ -6,3 +6,5 @@ export { Container } from './Container';
 export { Positioned } from './Positioned';
 export { Flex } from './Flex';
 export { Background } from './Background';
+export { TextAlign } from './TextAlign';
+export { TextLink } from './TextLink';
