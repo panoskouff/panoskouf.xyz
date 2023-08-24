@@ -44,7 +44,7 @@ export default function Home() {
         <Space h='sp-xl' />
         {/* @todo replace viewport spotlights with xxxl spacings */}
         <ProjectHighlightCard
-          caption='Latest Work'
+          kicker='Latest Work'
           title='Modular Personal Website'
           description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
           projectUrl='https://www.google.com'
@@ -53,7 +53,7 @@ export default function Home() {
         <Space h='sp-xl' />
         <Space h='sp-xl' />
         <ProjectHighlightCard
-          caption='Latest Work'
+          kicker='Latest Work'
           title='Modular Personal Website'
           description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
           projectUrl='https://www.google.com'

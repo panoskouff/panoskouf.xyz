@@ -22,7 +22,7 @@ const mockTags = [
 ];
 
 type Props = FlexProps & {
-  caption?: string;
+  kicker?: string;
   title: string;
   description: string;
   projectUrl: string;
@@ -31,7 +31,7 @@ type Props = FlexProps & {
 };
 
 export const ProjectHighlightCard: React.FC<Props> = ({
-  caption,
+  kicker,
   title,
   description,
   projectUrl,
@@ -48,7 +48,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
   >
     <Container w='54%' css={{ alignSelf: 'center' }}>
       <Text as='h4' textStyle='caption' color='text-color-tertiary'>
-        {caption}
+        {kicker}
       </Text>
       <Space h='sp-xs' />
       <Text as='h2' textStyle='title-secondary'>
