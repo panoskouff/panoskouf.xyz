@@ -1,64 +1,52 @@
 import { styled } from '../../styled-system/jsx';
-import { Positioned, Space, TextLink } from '#/atoms';
+import { AspectRatioImage, Positioned, Space, TextLink } from '#/atoms';
 import { Flex } from '#/atoms';
 import { Background } from '#/atoms';
 import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
 import { Navigation } from '#/components/Navigation';
-import { Text, TextAlign } from '#/atoms';
+import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
 
 // @todo share viewport cover layout as a layout between home and project route
 export default function Project() {
   return (
     <>
-      <Flex flexDirection='column' css={{ pos: 'relative', h: '100vh' }}>
-        <Positioned pos='relative' css={{ minH: '100%' }}>
+      <Flex flexDirection='column' css={{ pos: 'relative', minH: '100vh' }}>
+        <Positioned pos='absolute' css={{ h: '100vh', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
-            {/* @todo make background absolute so content can also flow above the bg cover ? */}
             <Background
               bg='bg-color-secondary'
               rounded='16px'
               css={{ h: '100%' }}
-            >
-              <SectionContainer css={{ h: '100%' }}>
-                <Positioned pos='relative' css={{ h: '100%' }}>
-                  <Space />
-                  <Navigation />
-                  <styled.div h='15vh' />
-                  <TextAlign textAlign='center'>
-                    <Text
-                      as='h4'
-                      textStyle='caption'
-                      color='text-color-tertiary'
-                    >
-                      Project Showcase
-                    </Text>
-                    <Space h='sp-xs' />
-                    <Text as='h1' textStyle='title'>
-                      Graphical User Interface
-                    </Text>
-                    <Space h='sp-sm' />
-                    <Text as='p' css={{ maxW: '736px' }}>
-                      Web-based Graphical User Interface for the Hippalus
-                      Exploratory Search System. A UI reimplementation for the
-                      Hippalus Exploratory Search System as a single page
-                      application written from scratch.
-                    </Text>
-                    <Space h='sp-sm' />
-                    <TextLink
-                      href='https://my-thesis.vercel.app/dataset/2'
-                      openInNewTab
-                    >
-                      visit live site →
-                    </TextLink>
-                  </TextAlign>
-                  <Space h='sp-md' />
-                </Positioned>
-              </SectionContainer>
-            </Background>
+            />
           </Padding>
         </Positioned>
+        <SectionContainer>
+          {/* @todo check if space above navigation is correct here */}
+          <Space h='48px' />
+          <Navigation />
+          <styled.div h='15vh' />
+          <ProjectHighlightIntro
+            title='Graphical User Interface'
+            description='Web-based Graphical User Interface for the Hippalus Exploratory
+          Search System. A UI reimplementation for the Hippalus Exploratory
+          Search System as a single page application written from scratch.'
+            projectUrl='https://my-thesis.vercel.app/dataset/2'
+          />
+          <Space h='sp-lg' />
+          <Positioned pos='relative' top='0' left='0'>
+            <AspectRatioImage
+              src='https://panoskouf.xyz/images/projects/spa-hippalus/thesis-showcase-1.jpg'
+              width={1440}
+              maxW='928px'
+              height={5873}
+            />
+          </Positioned>
+          {/* <div style={{ height: 2000, width: 50, backgroundColor: 'red' }} /> */}
+        </SectionContainer>
       </Flex>
+      <Space h='sp-lg' />
+      <div style={{ height: 50, width: 50, backgroundColor: 'green' }} />
     </>
   );
 }
