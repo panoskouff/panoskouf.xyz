@@ -6,6 +6,7 @@ import clsx from 'clsx';
 type AspectRatioImageProps = {
   width: number;
   height: number;
+  maxW?: string;
 } & React.AllHTMLAttributes<HTMLImageElement>;
 
 // @todo use picture element to support srcset
@@ -13,6 +14,7 @@ export const AspectRatioImage = ({
   src,
   width = 1,
   height = 1,
+  maxW,
   className,
   ...rest
 }: AspectRatioImageProps) => {
@@ -20,18 +22,20 @@ export const AspectRatioImage = ({
     <div
       className={clsx(s.aspectRatioBox, className)}
       style={{
-        paddingBottom: `calc(100% / ${width} * ${height} )`,
+        paddingBottom: `calc(100% / ${width} * ${height})`,
       }}
     >
       {/*
       browser calculates the expected aspect ratio based on width
       and height properties passed to img element
+      --> so as long as we pass the same width/height that we used
+      in our calculation above - which always happens, this is correct
       https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
       // @todo adjust properties passed here to have the intended
       // aspect ratio outcome
        */}
       <img
-        style={{ borderRadius: 'var(--border-radius-primary)' }}
+        style={{ borderRadius: 'var(--border-radius-primary)', maxWidth: maxW }}
         className={s.image}
         src={src}
         width={width}
