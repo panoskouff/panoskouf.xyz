@@ -6,6 +6,7 @@ import { Padding } from '#/atoms/Padding';
 import { SectionContainer } from '#/components/SectionContainer';
 import { Navigation } from '#/components/Navigation';
 import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
+import { Footer } from '#/components/Footer';
 
 // @todo share viewport cover layout as a layout between home and project route
 export default function Project() {
@@ -34,11 +35,16 @@ export default function Project() {
             projectUrl='https://my-thesis.vercel.app/dataset/2'
           />
           <Space h='sp-lg' />
-          <Positioned pos='relative' top='0' left='0'>
+          <Positioned
+            pos='relative'
+            top='0'
+            left='50%'
+            css={{ maxW: 928, transform: 'translateX(-50%)' }}
+          >
+            {/* @todo fix max-width  */}
             <AspectRatioImage
               src='https://panoskouf.xyz/images/projects/spa-hippalus/thesis-showcase-1.jpg'
               width={1440}
-              maxW='928px'
               height={5873}
             />
           </Positioned>
@@ -46,7 +52,8 @@ export default function Project() {
         </SectionContainer>
       </Flex>
       <Space h='sp-lg' />
-      <div style={{ height: 50, width: 50, backgroundColor: 'green' }} />
+      {/* <div style={{ height: 50, width: 50, backgroundColor: 'green' }} /> */}
+      <Footer />
     </>
   );
 }

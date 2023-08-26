@@ -8,8 +8,4 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* we center the image in case there is a maxWidth set */
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
 }

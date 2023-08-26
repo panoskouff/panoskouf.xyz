@@ -6,7 +6,6 @@ import clsx from 'clsx';
 type AspectRatioImageProps = {
   width: number;
   height: number;
-  maxW?: string;
 } & React.AllHTMLAttributes<HTMLImageElement>;
 
 // @todo use picture element to support srcset
@@ -14,7 +13,6 @@ export const AspectRatioImage = ({
   src,
   width = 1,
   height = 1,
-  maxW,
   className,
   ...rest
 }: AspectRatioImageProps) => {
@@ -35,7 +33,9 @@ export const AspectRatioImage = ({
       // aspect ratio outcome
        */}
       <img
-        style={{ borderRadius: 'var(--border-radius-primary)', maxWidth: maxW }}
+        style={{
+          borderRadius: 'var(--border-radius-primary)',
+        }}
         className={s.image}
         src={src}
         width={width}
