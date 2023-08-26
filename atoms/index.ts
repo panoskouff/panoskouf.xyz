@@ -8,3 +8,4 @@ export { Flex } from './Flex';
 export { Background } from './Background';
 export { TextAlign } from './TextAlign';
 export { TextLink } from './TextLink';
+export { Padding } from './Padding';
