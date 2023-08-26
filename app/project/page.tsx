@@ -41,7 +41,6 @@ export default function Project() {
             left='50%'
             css={{ maxW: 928, transform: 'translateX(-50%)' }}
           >
-            {/* @todo fix max-width  */}
             <AspectRatioImage
               src='https://panoskouf.xyz/images/projects/spa-hippalus/thesis-showcase-1.jpg'
               width={1440}
