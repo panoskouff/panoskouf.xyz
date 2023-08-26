@@ -16,28 +16,28 @@ export default function Home() {
   return (
     <>
       <Flex flexDirection='column' css={{ pos: 'relative', h: '100vh' }}>
-        <Positioned pos='relative' css={{ minH: '100%' }}>
+        <Positioned pos='absolute' css={{ h: '100vh', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
-            {/* @todo make background absolute so content can also flow above the bg cover ? */}
             <Background
               bg='bg-color-secondary'
               rounded='16px'
               css={{ h: '100%' }}
-            >
-              <SectionContainer css={{ h: '100%' }}>
-                <Positioned pos='relative' css={{ h: '100%' }}>
-                  <Space />
-                  <Navigation />
-                  <styled.div h='15vh' />
-                  <HeroHighlightIntro />
-                  <Positioned left='auto' top='auto' right='0' bottom='-14px'>
-                    <ScrollIndicator />
-                  </Positioned>
-                </Positioned>
-              </SectionContainer>
-            </Background>
+            />
           </Padding>
         </Positioned>
+        {/* height in SectionContainer and Positioned element
+          needed to be used as offset parent for ScrollIndicator */}
+        <SectionContainer css={{ h: '100%' }}>
+          <Positioned pos='relative' css={{ h: '100%' }}>
+            <Space h='48px' />
+            <Navigation />
+            <styled.div h='15vh' />
+            <HeroHighlightIntro />
+            <Positioned left='auto' top='auto' right='0' bottom='12px'>
+              <ScrollIndicator />
+            </Positioned>
+          </Positioned>
+        </SectionContainer>
       </Flex>
       <SectionContainer css={{ pos: 'relative' }}>
         <Space h='sp-lg' />
@@ -59,9 +59,8 @@ export default function Home() {
           projectUrl='https://www.google.com'
           imageUrl='https://placeholder.com/150'
         />
-        <Space h='sp-xl' />
       </SectionContainer>
-
+      <Space h='sp-xl' />
       <Footer />
     </>
   );

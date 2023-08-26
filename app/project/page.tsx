@@ -22,32 +22,34 @@ export default function Project() {
             />
           </Padding>
         </Positioned>
-        <SectionContainer>
-          {/* @todo check if space above navigation is correct here */}
-          <Space h='48px' />
-          <Navigation />
-          <styled.div h='15vh' />
-          <ProjectHighlightIntro
-            title='Graphical User Interface'
-            description='Web-based Graphical User Interface for the Hippalus Exploratory
+        <SectionContainer css={{ h: '100%' }}>
+          <Positioned pos='relative' css={{ h: '100%' }}>
+            {/* @todo check if space above navigation is correct here */}
+            <Space h='48px' />
+            <Navigation />
+            <styled.div h='15vh' />
+            <ProjectHighlightIntro
+              title='Graphical User Interface'
+              description='Web-based Graphical User Interface for the Hippalus Exploratory
           Search System. A UI reimplementation for the Hippalus Exploratory
           Search System as a single page application written from scratch.'
-            projectUrl='https://my-thesis.vercel.app/dataset/2'
-          />
-          <Space h='sp-lg' />
-          <Positioned
-            pos='relative'
-            top='0'
-            left='50%'
-            css={{ maxW: 928, transform: 'translateX(-50%)' }}
-          >
-            <AspectRatioImage
-              src='https://panoskouf.xyz/images/projects/spa-hippalus/thesis-showcase-1.jpg'
-              width={1440}
-              height={5873}
+              projectUrl='https://my-thesis.vercel.app/dataset/2'
             />
+            <Space h='sp-lg' />
+            <Positioned
+              pos='relative'
+              top='0'
+              left='50%'
+              css={{ maxW: 928, transform: 'translateX(-50%)' }}
+            >
+              <AspectRatioImage
+                src='https://panoskouf.xyz/images/projects/spa-hippalus/thesis-showcase-1.jpg'
+                width={1440}
+                height={5873}
+              />
+            </Positioned>
+            {/* <div style={{ height: 2000, width: 50, backgroundColor: 'red' }} /> */}
           </Positioned>
-          {/* <div style={{ height: 2000, width: 50, backgroundColor: 'red' }} /> */}
         </SectionContainer>
       </Flex>
       <Space h='sp-lg' />
