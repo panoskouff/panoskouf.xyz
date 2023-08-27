@@ -4,7 +4,8 @@ import { Navigation } from '#/components/Navigation';
 import { Footer } from '#/components/Footer';
 
 /* we need to do this because Next.js doesn't support
-  having a layout with parallel routes in a grouped route */
+  having a layout with parallel routes in a grouped
+  route or even dynamic route -_- */
 export default function HeroContentFooterLayout({
   hero,
   children,
