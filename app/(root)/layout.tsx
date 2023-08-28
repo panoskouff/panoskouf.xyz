@@ -1,8 +1,8 @@
-import HeroContentFooterLayout from '../heroContentFooterLayout';
+import MainLayout from '../mainLayout';
 
-export default function MainLayout(props: {
+export default function HomeLayout(props: {
   hero: React.ReactNode;
   children: React.ReactNode;
 }) {
-  return <HeroContentFooterLayout {...props} />;
+  return <MainLayout {...props} />;
 }

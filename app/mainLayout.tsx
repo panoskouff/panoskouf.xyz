@@ -5,7 +5,7 @@ import { Footer } from '#/components/Footer';
 
 /* we need to do this because Next.js doesn't support
   having a layout with parallel routes in a grouped route */
-export default function HeroContentFooterLayout({
+export default function MainLayout({
   hero,
   children,
 }: {
