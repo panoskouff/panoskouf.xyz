@@ -10,7 +10,7 @@ export default function MainLayout({
   children,
 }: {
   hero: React.ReactNode;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   return (
     <>
