@@ -4,10 +4,12 @@ import { AspectRatioImage, Positioned, Space } from '#/atoms';
 import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
 import { styled } from '#/styled-system/jsx';
 
-export default function ProjectPage(props: {
-  hero: React.ReactNode;
-  children: React.ReactNode;
-}) {
+type ProjectPageProps = {
+  params: { slug: string };
+};
+
+export default function ProjectPage({ params }: ProjectPageProps) {
+  console.log(params);
   return (
     <MainLayout
       hero={
