@@ -18,8 +18,10 @@ import { HTMLStyledProps } from '../styled-system/jsx';
  */
 export type PandaComponentProps<
   T extends keyof HTMLElementTagNameMap,
+  // @ts-ignore
   U extends keyof HTMLStyledProps<T>
 > = Merge<
   Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>,
+  // @ts-ignore
   Partial<Pick<HTMLStyledProps<T>, U>>
 >;

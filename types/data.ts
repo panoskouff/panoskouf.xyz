@@ -7,3 +7,12 @@ export type ProjectHighlightIntro = {
   projectCTA?: string;
   githubUrl?: string;
 };
+
+/* @todo use srcset once image hosting platform is setup */
+export type ProjectImage = {
+  src: string;
+  width: number;
+  height: number;
+};
+
+export type Project = ProjectHighlightIntro & { image: ProjectImage };

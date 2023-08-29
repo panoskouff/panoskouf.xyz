@@ -1,14 +1,5 @@
 /* temporary data until we move to a headless CMS */
-import { ProjectHighlightIntro } from '../../types/data';
-
-/* @todo use srcset once image hosting platform is setup */
-type ProjectImage = {
-  src: string;
-  width: number;
-  height: number;
-};
-
-type Project = ProjectHighlightIntro & { image: ProjectImage };
+import { Project } from '../../types/data';
 
 const projectDefaults: Partial<Project> = {
   kicker: 'Project Showcase',
