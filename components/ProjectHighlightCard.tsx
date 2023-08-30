@@ -6,28 +6,13 @@ import { Tag } from './Tag';
 import Link from 'next/link';
 import { styled } from '#/styled-system/jsx';
 
-const mockTags = [
-  {
-    id: 'tag-1',
-    text: 'React',
-  },
-  {
-    id: 'tag-2',
-    text: 'NextJS',
-  },
-  {
-    id: 'tag-3',
-    text: 'TypeScript',
-  },
-];
-
 type Props = FlexProps & {
   kicker?: string;
   title: string;
   description: string;
   projectUrl: string;
   imageUrl: string;
-  tags?: string[];
+  tags: { id: string; text: string }[];
 };
 
 export const ProjectHighlightCard: React.FC<Props> = ({
@@ -56,7 +41,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
       </Text>
       <Space h='sp-sm' />
       <Flex gap='16px'>
-        {mockTags.map((tag) => (
+        {tags.map((tag) => (
           <Tag key={tag.id} text={tag.text} />
         ))}
       </Flex>
@@ -71,11 +56,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
     <Container w='46%' css={{ alignSelf: 'center' }}>
       <Link href={projectUrl}>
         <Positioned pos='relative' css={{ w: '100%' }}>
-          <AspectRatioImage
-            src='https://panoskouf.xyz/images/projects/personal-website.jpg'
-            width={506}
-            height={431.5}
-          />
+          <AspectRatioImage src={imageUrl} width={506} height={431.5} />
           <Positioned left='-24px' bottom='-24px' top='auto' right='auto'>
             <styled.img
               src='/images/dot-pattern-min.png'

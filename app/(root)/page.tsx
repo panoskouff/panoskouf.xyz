@@ -1,29 +1,43 @@
 import { Space } from '#/atoms';
 import { ProjectHighlightCard } from '#/components/ProjectHighlightCard';
 import { SectionContainer } from '#/components/SectionContainer';
+import { Project } from '#/types/data';
 
-export default function HomeContent() {
+export default async function HomeContent() {
+  // @todo use actual static data instead of the api
+  // static rendering is the default
+  //  --> https://nextjs.org/docs/app/building-your-application/rendering/server-components#static-rendering-default
+  const projects: { data: Project[] } = await fetch(
+    'http://localhost:3000/api/projects'
+  ).then((res) => res.json());
+
   return (
     <SectionContainer css={{ pos: 'relative' }}>
       <Space h='sp-lg' />
       <Space h='sp-xl' />
-      {/* @todo replace viewport spotlights with xxxl spacings */}
-      <ProjectHighlightCard
-        kicker='Latest Work'
-        title='Modular Personal Website'
-        description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
-        projectUrl='https://www.google.com'
-        imageUrl='https://placeholder.com/150'
-      />
-      <Space h='sp-xl' />
-      <Space h='sp-xl' />
-      <ProjectHighlightCard
-        kicker='Latest Work'
-        title='Modular Personal Website'
-        description='A personal website with a profile in a social network fashion. It is built using Next.js so it can be extended into anything. Features include theming support with dark mode functionality and more.'
-        projectUrl='https://www.google.com'
-        imageUrl='https://placeholder.com/150'
-      />
+      {projects.data.flatMap((project, index, array) => {
+        const isLastProject = index === array.length - 1;
+
+        return [
+          <ProjectHighlightCard
+            key={project.slug}
+            kicker={project.kicker}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+            projectUrl={`/projects/${project.slug}`}
+            imageUrl={project.cardImageUrl}
+          />,
+          ...(!isLastProject
+            ? [
+                <Space h='sp-xl' key={`space1-${project.slug}`} />,
+                <Space h='sp-xl' key={`space2-${project.slug}`} />,
+              ]
+            : []),
+        ];
+      })}
+      <Space h='sp-md' />
+      <Space h='sp-lg' />
     </SectionContainer>
   );
 }

@@ -1,4 +1,5 @@
-export type ProjectHighlightIntro = {
+// @todo see which of these need to be required
+export type ProjectHighlight = {
   slug?: string;
   kicker?: string;
   title: string;
@@ -6,6 +7,9 @@ export type ProjectHighlightIntro = {
   projectUrl: string;
   projectCTA?: string;
   githubUrl?: string;
+  cardImageUrl: string;
+  cardCTA: string;
+  tags: { id: string; text: string }[];
 };
 
 /* @todo use srcset once image hosting platform is setup */
@@ -15,4 +19,4 @@ export type ProjectImage = {
   height: number;
 };
 
-export type Project = ProjectHighlightIntro & { image: ProjectImage };
+export type Project = ProjectHighlight & { image: ProjectImage };
