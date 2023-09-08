@@ -1,20 +1,28 @@
 import MainLayout from '../../mainLayout';
-import { Project } from '../../../types/data';
+// import { Project } from '../../../types/data';
 import { AspectRatioImage, Positioned, Space } from '#/atoms';
 import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
 import { styled } from '#/styled-system/jsx';
+import { projects as data } from '#/app/api/data';
 
 type ProjectPageProps = {
   params: { slug: string };
 };
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  // see comment below
-  const project: { data: Project } = await fetch(
-    `http://localhost:3000/api/projects/${params.slug}`
-  ).then((res) => res.json());
+  // @todo - my future api
+  // const project: { data: Project } = await fetch(
+  //   `http://localhost:3000/api/projects/${params.slug}`
+  // ).then((res) => res.json());
 
-  const { title, description, projectUrl, githubUrl, image } = project.data;
+  const project = data.find((project) => project.slug === params.slug);
+
+  if (!project) {
+    // this never happens because of the generateStaticParams function
+    return <div>There is not a project with this slug</div>;
+  }
+
+  const { title, description, projectUrl, githubUrl, image } = project;
 
   return (
     <MainLayout
@@ -46,14 +54,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 }
 
 export async function generateStaticParams() {
-  /* @todo fix, this approach will fail during build
-  time in production as there is no server running
-  to serve these requests, I should just read the data
-  directly here and do this once th headless cms is configured */
+  // @todo - my future api
+  // const projects: { data: Project[] } = await fetch(
+  //   'http://localhost:3000/api/projects'
+  // ).then((res) => res.json());
 
-  const projects: { data: Project[] } = await fetch(
-    'http://localhost:3000/api/projects'
-  ).then((res) => res.json());
-
-  return projects.data.map((project) => ({ slug: project.slug }));
+  return data.map((project) => ({ slug: project.slug }));
 }

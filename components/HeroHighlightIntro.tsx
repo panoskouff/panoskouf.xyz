@@ -1,19 +1,35 @@
 import { ButtonLink, Space, Text } from '#/atoms';
+import { HeroHighlight } from '../types/data';
 
-export const HeroHighlightIntro = () => (
+type HeroHighlightIntroProps = HeroHighlight & {
+  ctaUrl?: string;
+};
+
+export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
+  title,
+  description,
+  cta,
+  ctaUrl = '#',
+}) => (
   <>
-    <Text as='h1' textStyle='title' color='text-color-primary'>
-      Hi, I’m Panos,
-      <br />
-      Front End Engineer
+    <Text
+      as='h1'
+      textStyle='title'
+      color='text-color-primary'
+      css={{ whiteSpace: 'pre-line' }}
+    >
+      {title}
     </Text>
     <Space h='sp-sm' />
-    <Text as='p' textStyle='body' css={{ maxWidth: 600 }}>
-      I love everything TypeScript. Besides front end development, I am
-      interested in Node.js, Ionic and BaaS. My favorite framework is React.
+    <Text
+      as='p'
+      textStyle='body'
+      css={{ maxWidth: 600, whiteSpace: 'pre-line' }}
+    >
+      {description}
     </Text>
     <Space h='sp-xs' />
     <Space />
-    <ButtonLink>see my work</ButtonLink>
+    <ButtonLink href={ctaUrl}>{cta}</ButtonLink>
   </>
 );

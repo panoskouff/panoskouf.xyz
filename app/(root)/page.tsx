@@ -1,21 +1,22 @@
 import { Space } from '#/atoms';
 import { ProjectHighlightCard } from '#/components/ProjectHighlightCard';
 import { SectionContainer } from '#/components/SectionContainer';
-import { Project } from '#/types/data';
+import { projects as data } from '#/app/api/data';
+// import { Project } from '#/types/data';
 
-export default async function HomeContent() {
-  // @todo use actual static data instead of the api
+export default function HomeContent() {
+  // @todo - my future api
   // static rendering is the default
   //  --> https://nextjs.org/docs/app/building-your-application/rendering/server-components#static-rendering-default
-  const projects: { data: Project[] } = await fetch(
-    'http://localhost:3000/api/projects'
-  ).then((res) => res.json());
+  // const projects: { data: Project[] } = await fetch(
+  //   'http://localhost:3000/api/projects'
+  // ).then((res) => res.json());
 
   return (
     <SectionContainer css={{ pos: 'relative' }}>
       <Space h='sp-lg' />
       <Space h='sp-xl' />
-      {projects.data.flatMap((project, index, array) => {
+      {data.flatMap((project, index, array) => {
         const isLastProject = index === array.length - 1;
 
         return [

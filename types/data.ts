@@ -1,3 +1,9 @@
+export type HeroHighlight = {
+  title: string;
+  description: string;
+  cta: string;
+};
+
 // @todo see which of these need to be required
 export type ProjectHighlight = {
   slug?: string;
