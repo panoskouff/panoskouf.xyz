@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`${mulish.variable} ${tinos.variable}`}>
-      <body className={mulish.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
