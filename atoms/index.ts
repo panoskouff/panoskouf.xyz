@@ -1,11 +1,17 @@
 export { ButtonLink } from './ButtonLink/ButtonLink';
 export { Space } from './Space';
 export { Text } from './Text';
+export { Label } from './Label';
 export { AspectRatioImage } from './AspectRatioImage/AspectRatioImage';
 export { Container } from './Container';
 export { Positioned } from './Positioned';
 export { Flex } from './Flex';
+export { Row } from './Row';
+export { Column } from './Column';
 export { Background } from './Background';
 export { TextAlign } from './TextAlign';
 export { TextLink } from './TextLink';
 export { Padding } from './Padding';
+export { Input } from './Input';
+export { Select } from './Select';
+export { TextArea } from './TextArea';

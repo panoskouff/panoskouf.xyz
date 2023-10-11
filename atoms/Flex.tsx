@@ -13,12 +13,8 @@ export type FlexProps = PandaComponentProps<
   | 'css'
 >;
 
-export const Flex: React.FC<FlexProps> = ({
-  display = 'flex',
-  children,
-  ...rest
-}) => (
-  <styled.div display={display} {...rest}>
+export const Flex: React.FC<FlexProps> = ({ children, ...rest }) => (
+  <styled.div display='flex' {...rest}>
     {children}
   </styled.div>
 );
