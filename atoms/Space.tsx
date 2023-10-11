@@ -3,13 +3,8 @@ import { styled } from '#/styled-system/jsx';
 
 export type SpaceProps = PandaComponentProps<'div', 'h' | 'w' | 'css'>;
 
-export const Space: React.FC<SpaceProps> = ({
-  children,
-  h = 'sp-md',
-  w = 'sp-xs',
-  ...rest
-}) => (
-  <styled.div h={h} w={w} {...rest}>
+export const Space: React.FC<SpaceProps> = ({ children, ...rest }) => (
+  <styled.div h='sp-md' w='sp-xs' {...rest}>
     {children}
   </styled.div>
 );

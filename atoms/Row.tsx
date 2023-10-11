@@ -12,12 +12,8 @@ export type RowProps = PandaComponentProps<
   | 'css'
 >;
 
-export const Row: React.FC<RowProps> = ({
-  alignItems = 'center',
-  children,
-  ...rest
-}) => (
-  <Flex alignItems={alignItems} {...rest}>
+export const Row: React.FC<RowProps> = ({ children, ...rest }) => (
+  <Flex alignItems='center' {...rest}>
     {children}
   </Flex>
 );

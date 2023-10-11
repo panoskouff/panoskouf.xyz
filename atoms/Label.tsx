@@ -21,13 +21,8 @@ export type LabelProps = Merge<
   Partial<PandaLabelProps>
 >;
 
-export const Label: React.FC<LabelProps> = ({
-  children,
-  textStyle = 'body',
-  color = 'text-color-primary',
-  ...rest
-}) => (
-  <styled.label textStyle={textStyle} color={color} {...rest}>
+export const Label: React.FC<LabelProps> = ({ children, ...rest }) => (
+  <styled.label textStyle='body' color='text-color-primary' {...rest}>
     {children}
   </styled.label>
 );

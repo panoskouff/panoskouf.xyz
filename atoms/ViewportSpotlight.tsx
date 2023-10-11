@@ -15,13 +15,10 @@ export type ViewportSpotlightProps = PandaComponentProps<
  * you can pass justify-content="center" to center in the X axis as well.
  */
 export const ViewportSpotlight: React.FC<ViewportSpotlightProps> = ({
-  alignItems = 'center',
-  display = 'flex',
-  h = '100vh',
   children,
   ...rest
 }) => (
-  <styled.div display={display} alignItems={alignItems} h={h} {...rest}>
+  <styled.div display='flex' alignItems='center' h='100vh' {...rest}>
     {children}
   </styled.div>
 );

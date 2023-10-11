@@ -14,22 +14,10 @@ type PositionedProps = PandaComponentProps<
 >;
 
 export const Positioned: React.FC<PositionedProps> = ({
-  pos = 'absolute',
-  top = 0,
-  right = 0,
-  bottom = 0,
-  left = 0,
   children,
   ...rest
 }) => (
-  <styled.div
-    pos={pos}
-    top={top}
-    right={right}
-    bottom={bottom}
-    left={left}
-    {...rest}
-  >
+  <styled.div pos='absolute' top={0} right={0} bottom={0} left={0} {...rest}>
     {children}
   </styled.div>
 );

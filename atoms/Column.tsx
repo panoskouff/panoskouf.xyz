@@ -12,11 +12,7 @@ export type ColumnProps = PandaComponentProps<
   | 'css'
 >;
 
-export const Column: React.FC<ColumnProps> = ({
-  alignItems = 'center',
-  children,
-  ...rest
-}) => (
+export const Column: React.FC<ColumnProps> = ({ children, ...rest }) => (
   <Flex flexDirection='column' {...rest}>
     {children}
   </Flex>
