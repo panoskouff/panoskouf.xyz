@@ -51,7 +51,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
         {description}
       </Text>
       <Space h='sp-md' />
-      <ButtonLink>View Project</ButtonLink>
+      <ButtonLink href={projectUrl}>View Project</ButtonLink>
     </Container>
     <Container w='46%' css={{ alignSelf: 'center' }}>
       <Link href={projectUrl}>

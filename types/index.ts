@@ -1,5 +1,7 @@
 import { HTMLStyledProps } from '../styled-system/jsx';
 
+// @todo simplify this to pass this part of the type as a prop
+// React.HTMLAttributes<HTMLDivElement>
 /**
  * constrain the props of a panda component in order to
  *  build a more opinionated component.

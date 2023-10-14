@@ -8,6 +8,7 @@ export { Positioned } from './Positioned';
 export { Flex } from './Flex';
 export { Row } from './Row';
 export { Column } from './Column';
+export { Center } from './Center';
 export { Background } from './Background';
 export { TextAlign } from './TextAlign';
 export { TextLink } from './TextLink';

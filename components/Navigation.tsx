@@ -11,7 +11,8 @@ export const Navigation = () => (
     </Link>
     <Flex gap='45px'>
       <TextLink href='/#Portfolio'>my work</TextLink>
-      <TextLink href='mailto:me@panoskouf.xyz'>get in touch</TextLink>
+      {/* <TextLink href='mailto:me@panoskouf.xyz'>get in touch</TextLink> */}
+      <TextLink href='/contact'>get in touch</TextLink>
       <TextLink href='/cv.html'>📃CV</TextLink>
     </Flex>
   </Flex>

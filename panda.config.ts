@@ -37,6 +37,8 @@ export default defineConfig({
         'section-max-width': { value: '1300px' },
       },
       spacing: {
+        // padding
+        'input-padding-base': { value: '10px' },
         'section-offset': { value: '84px' },
       },
       radii: {

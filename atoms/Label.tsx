@@ -21,8 +21,14 @@ export type LabelProps = Merge<
   Partial<PandaLabelProps>
 >;
 
-export const Label: React.FC<LabelProps> = ({ children, ...rest }) => (
+export const Label: React.FC<LabelProps & { required?: boolean }> = ({
+  children,
+  required,
+  ...rest
+}) => (
   <styled.label textStyle='body' color='text-color-primary' {...rest}>
     {children}
+    {/* @todo add color to panda config */}
+    {required && <styled.span color='#ff0303'>&nbsp;*</styled.span>}
   </styled.label>
 );
