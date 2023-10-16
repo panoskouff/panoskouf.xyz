@@ -1,17 +1,19 @@
 'use server';
 
 import { z } from 'zod';
+import { model } from './model';
+
+import { AtLeastOneString } from '../../types/atLeastOneString';
+
+const options = model.reasonForContact.select.options.map(
+  (option) => option.value
+) as AtLeastOneString;
 
 const schema = z.object({
-  name: z.string().max(200).optional(),
-  reasonForContact: z.enum([
-    'feedback-on-my-work',
-    'inquiry-about-collaboration',
-    'job-opportunity',
-    'other',
-  ]),
-  message: z.string().max(3000),
-  followUp: z.string().max(500).optional(),
+  name: z.string().max(model.name.input.maxLength).optional(),
+  reasonForContact: z.enum(options),
+  message: z.string().max(model.message.textarea.maxLength),
+  followUp: z.string().max(model.needToFollowBack.input.maxLength).optional(),
 });
 
 export type ContactFormState = {
@@ -24,18 +26,21 @@ export async function handleContactForm(
   formData: FormData
 ): Promise<ContactFormState> {
   const result = schema.safeParse({
-    name: formData.get('name'),
-    reasonForContact: formData.get('reason-for-contact'),
-    message: formData.get('message'),
-    followUp: formData.get('need-to-follow-up'),
+    name: formData.get(model.name.input.name),
+    reasonForContact: formData.get(model.reasonForContact.select.name),
+    message: formData.get(model.message.textarea.name),
+    followUp: formData.get(model.needToFollowBack.input.name),
   });
 
   if (!result.success) {
+    console.log('validation failed', result.error);
     return {
       submitted: true,
       ServerValidationSuccessful: false,
     };
   }
+
+  console.log('validation successful', result.data);
 
   // @todo post result.data to backend
 

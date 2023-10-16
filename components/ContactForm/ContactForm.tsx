@@ -5,6 +5,17 @@ import {
 } from '#/atoms';
 import { SubmitButton } from './SubmitButton';
 import { ContactFormState } from './action';
+import { model } from './model';
+
+const nameLabel = model.name.label;
+const nameInput = model.name.input;
+const reasonForContactLabel = model.reasonForContact.label;
+const reasonForContactSelect = model.reasonForContact.select;
+const messageLabel = model.message.label;
+const messageTextArea = model.message.textarea;
+// @todo follow back or follow up
+const needToFollowUpLabel = model.needToFollowBack.label;
+const needToFollowUpInput = model.needToFollowBack.input;
 
 type Props = {
   formAction: (data: FormData) => Promise<ContactFormState>;
@@ -17,62 +28,60 @@ export const ContactForm = ({ formAction, formState }: Props) => {
     <styled.form maxW='500px' w='100%' action={formAction}>
       <Column gap='20px'>
         <Row gap='20px'>
-          <Label htmlFor='name'>Name</Label>
+          <Label htmlFor={nameLabel.htmlFor}>{nameLabel.innerText}</Label>
           <Input
             type='text'
-            name='name'
-            placeholder='Anonymous'
-            maxLength={200}
-            title='Optional field, 200 characters max'
+            name={nameInput.name}
+            placeholder={nameInput.placeholder}
+            maxLength={nameInput.maxLength}
+            title={nameInput.title}
             flexGrow={1}
           />
         </Row>
         <Row gap='20px'>
-          <Label required htmlFor='reason-for-contact'>
-            Reason for contact
+          <Label required htmlFor={reasonForContactLabel.htmlFor}>
+            {reasonForContactLabel.innerText}
           </Label>
           <Select
             required
-            name='reason-for-contact'
+            name={reasonForContactSelect.name}
             flexGrow={1}
-            title='This field is required'
-            defaultValue=''
+            title={reasonForContactSelect.title}
+            defaultValue={reasonForContactSelect.defaultValue}
           >
             <option value='' disabled>
-              -Please Select an Option-
+              {reasonForContactSelect.defaultValueText}
             </option>
-            <option value='feedback-on-my-work'>Feedback on my work</option>
-            <option value='inquiry-about-collaboration'>
-              Inquiry about collaboration
-            </option>
-            <option value='job-opportunity'>Job opportunity</option>
-            {/* <option value='meme'>I need to share this meme with you !</option> */}
-            <option value='other'>Other</option>
+            {reasonForContactSelect.options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.innerText}
+              </option>
+            ))}
           </Select>
         </Row>
         <Column gap='6px'>
-          <Label required htmlFor='message'>
-            Message
+          <Label required htmlFor={messageLabel.htmlFor}>
+            {messageLabel.innerText}
           </Label>
           <TextArea
             required
-            name='message'
-            maxLength={3000}
-            title='Required field, 3000 characters max'
+            name={messageTextArea.name}
+            maxLength={messageTextArea.maxLength}
+            title={messageTextArea.title}
+            placeholder={messageTextArea.placeholder}
             rows={10}
-            placeholder='Your Message Here..'
           />
         </Column>
         <Column gap='6px'>
-          <Label htmlFor='need-to-follow-up'>
-            Do you want to hear back from me?
+          <Label htmlFor={needToFollowUpLabel.htmlFor}>
+            {needToFollowUpLabel.innerText}
           </Label>
           <Input
             type='text'
-            name='need-to-follow-up'
-            placeholder='Let me know what is the best way to contact you.'
-            maxLength={500}
-            title='Optional field, 500 characters max'
+            name={needToFollowUpInput.name}
+            placeholder={needToFollowUpInput.placeholder}
+            maxLength={needToFollowUpInput.maxLength}
+            title={needToFollowUpInput.title}
             flexGrow={1}
           />
         </Column>

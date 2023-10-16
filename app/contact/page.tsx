@@ -12,8 +12,8 @@ import {
 import { ContactForm } from '#/components/ContactForm/ContactForm';
 
 const initialState: ContactFormState = {
-  submitted: true,
-  ServerValidationSuccessful: true,
+  submitted: false,
+  ServerValidationSuccessful: false,
 };
 
 /*

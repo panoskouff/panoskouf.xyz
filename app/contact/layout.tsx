@@ -1,7 +1,7 @@
 import {
   Positioned,
   Space,
-  Flex,
+  Column,
   Background,
   Padding,
   ColumnFullHeightWrapper,
@@ -19,7 +19,7 @@ export default function ContactLayout({
 }) {
   return (
     <>
-      <Flex flexDirection='column' css={{ pos: 'relative', minH: '100vh' }}>
+      <Column css={{ pos: 'relative', minH: '100vh' }}>
         <Positioned pos='absolute' css={{ h: '100%', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
             <Background
@@ -31,7 +31,6 @@ export default function ContactLayout({
         </Positioned>
         <SectionContainer css={{ h: '100%', flexGrow: 1 }}>
           <Positioned pos='relative' css={{ h: '100%' }}>
-            {/* @todo create generic use of this component and name it accordingly */}
             <ColumnFullHeightWrapper>
               {/* @todo check if space above navigation is correct here */}
               <Space h='48px' />
@@ -43,7 +42,7 @@ export default function ContactLayout({
             </ColumnFullHeightWrapper>
           </Positioned>
         </SectionContainer>
-      </Flex>
+      </Column>
     </>
   );
 }
