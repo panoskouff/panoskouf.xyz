@@ -16,3 +16,4 @@ export { Padding } from './Padding';
 export { Input } from './Input';
 export { Select } from './Select';
 export { TextArea } from './TextArea';
+export * from './HeightHelpers';

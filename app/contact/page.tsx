@@ -4,6 +4,7 @@
 
 import { experimental_useFormState as useFormState } from 'react-dom';
 import { Text, Space, Center, Padding } from '#/atoms';
+import { styled } from '#/styled-system/jsx';
 import {
   handleContactForm,
   ContactFormState,
@@ -11,8 +12,8 @@ import {
 import { ContactForm } from '#/components/ContactForm/ContactForm';
 
 const initialState: ContactFormState = {
-  submitted: false,
-  ServerValidationSuccessful: false,
+  submitted: true,
+  ServerValidationSuccessful: true,
 };
 
 /*
@@ -32,16 +33,13 @@ export default function Contact() {
   );
 
   return (
-    <Center css={{ flexDirection: 'column' }}>
+    <Center css={{ flexDirection: 'column', minHeight: '100%' }}>
       <Space h='sp-md' />
       {state.submitted && state.ServerValidationSuccessful ? (
-        // @todo fix height of this container and parents
-        <Padding py={120} css={{ alignSelf: 'center' }}>
-          <Text textStyle='title'>Thank you for your message 👌</Text>
-          {/* reset state on history back button ?  --> seems like
-            useFormState doesn't provide a way to reset the state */}
-        </Padding>
+        <Text textStyle='title'>Thank you for your message 👌</Text>
       ) : (
+        /* reset state on history back button ?  --> seems like
+            useFormState doesn't provide a way to reset the state */
         <>
           <Padding py={20}>
             <Text textStyle='title'>Get in Touch</Text>

@@ -1,7 +1,16 @@
-import { Positioned, Space, Flex, Background, Padding } from '#/atoms';
+import {
+  Positioned,
+  Space,
+  Flex,
+  Background,
+  Padding,
+  ColumnFullHeightWrapper,
+  RemainingHeightContainer,
+} from '#/atoms';
 import { SectionContainer } from '#/components/SectionContainer';
 import { Navigation } from '#/components/Navigation';
 import { Footer } from '#/components/Footer';
+import { styled } from '#/styled-system/jsx';
 
 export default function ContactLayout({
   children,
@@ -22,13 +31,16 @@ export default function ContactLayout({
         </Positioned>
         <SectionContainer css={{ h: '100%', flexGrow: 1 }}>
           <Positioned pos='relative' css={{ h: '100%' }}>
-            {/* @todo check if space above navigation is correct here */}
-            <Space h='48px' />
-            <Navigation />
-            {children}
-            <Space h='sp-lg' />
-            {/* @todo fix footer */}
-            <Footer />
+            {/* @todo create generic use of this component and name it accordingly */}
+            <ColumnFullHeightWrapper>
+              {/* @todo check if space above navigation is correct here */}
+              <Space h='48px' />
+              <Navigation />
+              <RemainingHeightContainer>{children}</RemainingHeightContainer>
+              <Space h='sp-lg' />
+              {/* @todo fix footer */}
+              <Footer />
+            </ColumnFullHeightWrapper>
           </Positioned>
         </SectionContainer>
       </Flex>
