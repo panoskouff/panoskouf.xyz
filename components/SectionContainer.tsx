@@ -31,7 +31,7 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
 /*
 if I want to set position for styled.div I can do
 <SectionContainer>
-  <Positioned pos='relative'>
+  <Position pos='relative'>
 
   issue:
   or I could expose a prop for it but the name would have to

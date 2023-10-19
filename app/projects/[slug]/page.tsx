@@ -1,6 +1,6 @@
 import MainLayout from '../../mainLayout';
 // import { Project } from '../../../types/data';
-import { AspectRatioImage, Positioned, Space } from '#/atoms';
+import { AspectRatioImage, Position, Space } from '#/atoms';
 import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
 import { styled } from '#/styled-system/jsx';
 import { projects as data } from '#/app/api/data';
@@ -35,7 +35,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             projectUrl={projectUrl}
           />
           <Space h='sp-lg' />
-          <Positioned
+          <Position
             pos='relative'
             top='0'
             left='50%'
@@ -46,7 +46,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               width={image.width}
               height={image.height}
             />
-          </Positioned>
+          </Position>
         </>
       }
     />

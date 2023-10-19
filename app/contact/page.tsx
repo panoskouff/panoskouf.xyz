@@ -27,7 +27,7 @@ but is not clean..
 
 export default function Contact() {
   const [state, formAction] = useFormState<ContactFormState>(
-    // @ts-ignore - this is a bug in the types
+    // @ts-ignore
     handleContactForm,
     initialState
   );

@@ -1,4 +1,4 @@
-import { Positioned, Space, Flex, Background, Padding } from '#/atoms';
+import { Position, Space, Flex, Background, Padding } from '#/atoms';
 import { SectionContainer } from '#/components/SectionContainer';
 import { Navigation } from '#/components/Navigation';
 import { Footer } from '#/components/Footer';
@@ -15,7 +15,7 @@ export default function MainLayout({
   return (
     <>
       <Flex flexDirection='column' css={{ pos: 'relative', minH: '100vh' }}>
-        <Positioned pos='absolute' css={{ h: '100vh', zIndex: -1 }}>
+        <Position pos='absolute' css={{ h: '100vh', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
             <Background
               bg='bg-color-secondary'
@@ -23,14 +23,14 @@ export default function MainLayout({
               css={{ h: '100%' }}
             />
           </Padding>
-        </Positioned>
+        </Position>
         <SectionContainer css={{ h: '100%', flexGrow: 1 }}>
-          <Positioned pos='relative' css={{ h: '100%' }}>
+          <Position pos='relative' css={{ h: '100%' }}>
             {/* @todo check if space above navigation is correct here */}
             <Space h='48px' />
             <Navigation />
             {hero}
-          </Positioned>
+          </Position>
         </SectionContainer>
       </Flex>
       {children}

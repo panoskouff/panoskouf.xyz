@@ -1,5 +1,5 @@
 import {
-  Positioned,
+  Position,
   Space,
   Column,
   Background,
@@ -20,7 +20,7 @@ export default function ContactLayout({
   return (
     <>
       <Column css={{ pos: 'relative', minH: '100vh' }}>
-        <Positioned pos='absolute' css={{ h: '100%', zIndex: -1 }}>
+        <Position pos='absolute' css={{ h: '100%', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
             <Background
               bg='bg-color-secondary'
@@ -28,9 +28,9 @@ export default function ContactLayout({
               css={{ h: '100%' }}
             />
           </Padding>
-        </Positioned>
+        </Position>
         <SectionContainer css={{ h: '100%', flexGrow: 1 }}>
-          <Positioned pos='relative' css={{ h: '100%' }}>
+          <Position pos='relative' css={{ h: '100%' }}>
             <ColumnFullHeightWrapper>
               {/* @todo check if space above navigation is correct here */}
               <Space h='48px' />
@@ -40,7 +40,7 @@ export default function ContactLayout({
               {/* @todo fix footer */}
               <Footer />
             </ColumnFullHeightWrapper>
-          </Positioned>
+          </Position>
         </SectionContainer>
       </Column>
     </>

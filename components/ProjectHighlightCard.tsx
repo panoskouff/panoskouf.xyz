@@ -1,4 +1,4 @@
-import { AspectRatioImage, ButtonLink, Positioned, Space, Text } from '#/atoms';
+import { AspectRatioImage, ButtonLink, Position, Space, Text } from '#/atoms';
 // @todo export atoms types from index
 import { Flex, FlexProps } from '#/atoms/Flex';
 import { Container } from '#/atoms/Container';
@@ -55,17 +55,17 @@ export const ProjectHighlightCard: React.FC<Props> = ({
     </Container>
     <Container w='46%' css={{ alignSelf: 'center' }}>
       <Link href={projectUrl}>
-        <Positioned pos='relative' css={{ w: '100%' }}>
+        <Position pos='relative' css={{ w: '100%' }}>
           <AspectRatioImage src={imageUrl} width={506} height={431.5} />
-          <Positioned left='-24px' bottom='-24px' top='auto' right='auto'>
+          <Position left='-24px' bottom='-24px' top='auto' right='auto'>
             <styled.img
               src='/images/dot-pattern-min.png'
               w='100px'
               verticalAlign='middle'
               display='inline-block'
             />
-          </Positioned>
-          <Positioned left='auto' bottom='-44px' top='auto' right='auto'>
+          </Position>
+          <Position left='auto' bottom='-44px' top='auto' right='auto'>
             {/* @todo https://panda-css.com/docs/guides/dynamic-styling */}
             <Flex gap='12px' alignItems='center'>
               {/* <Text
@@ -83,8 +83,8 @@ export const ProjectHighlightCard: React.FC<Props> = ({
                 display='inline-block'
               /> */}
             </Flex>
-          </Positioned>
-        </Positioned>
+          </Position>
+        </Position>
       </Link>
     </Container>
   </Flex>
