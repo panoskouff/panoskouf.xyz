@@ -1,5 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
-import { textStyles } from './styles/text-styles';
+import { textStyles } from './theme/textStyles';
 
 export default defineConfig({
   // Whether to use css reset
@@ -44,6 +44,9 @@ export default defineConfig({
       radii: {
         sm: { value: '5px' },
         lg: { value: '16px' },
+      },
+      easings: {
+        swiftDecelerate: { value: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)' },
       },
     },
     semanticTokens: {

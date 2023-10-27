@@ -1,8 +1,8 @@
-import '../styles/index.css';
-import '../styles/css-reset.css';
-import '../styles/theme.css';
-import '../styles/globals.css';
-import { mulish, tinos } from '@/fonts';
+import '../theme/css/index.css';
+import '../theme/css/reset.css';
+import '../theme/css/theme.css';
+import '../theme/css/globals.css';
+import { mulish, tinos } from '#/theme/fonts';
 
 export const metadata = {
   title: 'Create Next App',
