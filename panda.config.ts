@@ -1,5 +1,6 @@
 import { defineConfig } from '@pandacss/dev';
 import { textStyles } from './theme/textStyles';
+import { keyframes } from './theme/keyframes';
 
 export default defineConfig({
   // Whether to use css reset
@@ -58,7 +59,7 @@ export default defineConfig({
         'sp-xl': { value: { smToLg: '70px', lg: '140px' } },
       },
     },
-    extend: { textStyles },
+    extend: { textStyles, keyframes },
   },
 
   jsxFramework: 'react',

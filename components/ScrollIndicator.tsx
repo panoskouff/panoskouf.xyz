@@ -1,6 +1,5 @@
 import { Mask, Transform } from '#/atoms';
-import { css } from '#/styled-system/css';
-import s from './ScrollIndicator.module.css';
+import { styled } from '#/styled-system/jsx';
 
 type Props = {
   sideText?: string;
@@ -8,7 +7,12 @@ type Props = {
 
 export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
   <Mask w={46} h={105}>
-    <div className={s.line}></div>
+    <styled.div
+      w={2}
+      h={105}
+      bgColor='text-color-primary'
+      animation='popInSlideDown 4s var(--easings-swift-decelerate) 1s infinite'
+    />
     {/* @todo use Text instead css ?*/}
     <Transform
       left={46}
@@ -20,12 +24,3 @@ export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
     </Transform>
   </Mask>
 );
-
-/*
-export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
-  <div className={s.container}>
-    <div className={s.line}></div>
-    <div className={s.sideText}>{sideText}</div>
-  </div>
-);
-*/
