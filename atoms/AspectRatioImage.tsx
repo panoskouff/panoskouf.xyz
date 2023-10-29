@@ -1,5 +1,17 @@
-import s from './AspectRatioImage.module.css';
 import clsx from 'clsx';
+import { css } from '../styled-system/css';
+
+const aspectRatioBox = css({
+  position: 'relative',
+  height: 0,
+});
+
+const image = css({
+  position: 'absolute',
+  width: '100%',
+  height: 'auto',
+  objectFit: 'cover',
+});
 
 /* the way this component is built needs to be
     wrapped in a div that has width set */
@@ -18,7 +30,7 @@ export const AspectRatioImage = ({
 }: AspectRatioImageProps) => {
   return (
     <div
-      className={clsx(s.aspectRatioBox, className)}
+      className={clsx(aspectRatioBox, className)}
       style={{
         paddingBottom: `calc(100% / ${width} * ${height})`,
       }}
@@ -36,7 +48,7 @@ export const AspectRatioImage = ({
         style={{
           borderRadius: 'var(--border-radius-primary)',
         }}
-        className={s.image}
+        className={image}
         src={src}
         width={width}
         height={height}

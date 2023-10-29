@@ -1,8 +1,7 @@
-export { ButtonLink } from './ButtonLink/ButtonLink';
 export { Space } from './Space';
 export { Text } from './Text';
 export { Label } from './Label';
-export { AspectRatioImage } from './AspectRatioImage/AspectRatioImage';
+export { AspectRatioImage } from './AspectRatioImage';
 export { Container } from './Container';
 export { Position } from './Position';
 export { Flex } from './Flex';

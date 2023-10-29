@@ -1,4 +1,5 @@
-import { ButtonLink, Space, Text } from '#/atoms';
+import { Space, Text } from '#/atoms';
+import { ButtonLink } from '#/components/ButtonLink';
 import { HeroHighlight } from '../types/data';
 
 type HeroHighlightIntroProps = HeroHighlight & {

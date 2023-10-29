@@ -5,6 +5,7 @@ import { HeroHighlight } from '#/types/data';
 export const homeHero: HeroHighlight = {
   title: `Hi, I’m Panos,
   Front End Engineer`,
+  // @todo use wbr for line breaks https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
   description: `I love everything TypeScript. Besides front end development, I am
   interested in Node.js, Ionic and BaaS. My favorite framework is React.`,
   cta: 'see my work',

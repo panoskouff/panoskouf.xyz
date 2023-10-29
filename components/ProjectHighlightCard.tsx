@@ -1,7 +1,8 @@
-import { AspectRatioImage, ButtonLink, Position, Space, Text } from '#/atoms';
+import { AspectRatioImage, Position, Space, Text } from '#/atoms';
 // @todo export atoms types from index
 import { Flex, FlexProps } from '#/atoms/Flex';
 import { Container } from '#/atoms/Container';
+import { ButtonLink } from './ButtonLink';
 import { Tag } from './Tag';
 import Link from 'next/link';
 import { styled } from '#/styled-system/jsx';
