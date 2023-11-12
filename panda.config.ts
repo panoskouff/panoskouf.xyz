@@ -56,7 +56,7 @@ export default defineConfig({
         'sp-sm': { value: '20px' },
         'sp-md': { value: '32px' },
         'sp-lg': { value: '64px' },
-        'sp-xl': { value: { smToLg: '70px', lg: '140px' } },
+        'sp-xl': { value: { base: '70px', lg: '140px' } },
       },
     },
     extend: { textStyles, keyframes },
