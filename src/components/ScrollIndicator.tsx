@@ -1,4 +1,4 @@
-import { Mask, Transform } from '#/atoms'
+import { Mask, Transform, Text } from '#/atoms'
 import { styled } from '#/styled-system/jsx'
 
 type Props = {
@@ -15,12 +15,14 @@ export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
     />
     {/* @todo use Text instead css ?*/}
     <Transform
-      left={46}
+      top={3}
+      left={40}
       transform='perspective(0px) rotate(90deg)'
       transformOrigin='0% 0%'
-      css={{ fontWeight: 700, textTransform: 'uppercase' }}
     >
-      {sideText}
+      <Text textStyle='caption' fontWeight='700' letterSpacing='normal'>
+        {sideText}
+      </Text>
     </Transform>
   </Mask>
 )

@@ -11,6 +11,7 @@ const image = css({
   width: '100%',
   height: 'auto',
   objectFit: 'cover',
+  borderRadius: 'lg',
 })
 
 /* the way this component is built needs to be
@@ -45,9 +46,6 @@ export const AspectRatioImage = ({
       // aspect ratio outcome
        */}
       <img
-        style={{
-          borderRadius: 'var(--border-radius-primary)',
-        }}
         className={image}
         src={src}
         width={width}
