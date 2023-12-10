@@ -1,6 +1,6 @@
 /* temporary data until we move to a headless CMS */
-import { Project } from '../../types/data';
-import { HeroHighlight } from '#/types/data';
+import { Project } from '../../types/data'
+import { HeroHighlight } from '#/types/data'
 
 export const homeHero: HeroHighlight = {
   title: `Hi, I’m Panos,
@@ -9,7 +9,7 @@ export const homeHero: HeroHighlight = {
   description: `I love everything TypeScript. Besides front end development, I am
   interested in Node.js, Ionic and BaaS. My favorite framework is React.`,
   cta: 'see my work',
-};
+}
 
 const tags = {
   react: { id: 'react', text: 'React' },
@@ -20,16 +20,16 @@ const tags = {
   servercomponents: { id: 'servercomponents', text: 'ServerComponents' },
   chromeextension: { id: 'chromeextension', text: 'Chrome Extension' },
   markdown: { id: 'markdown', text: 'Markdown' },
-};
+}
 
 const projectRequiredDefaults = {
   cardCTA: 'see this project',
-};
+}
 
 const projectOptionalDefaults: Partial<Project> = {
   kicker: 'Project Showcase',
   projectCTA: 'visit live site →',
-};
+}
 
 // @todo add date of when each project was built ? eg "Last updated: 3 years ago"
 // @todo redirect old slugs using next middleware
@@ -114,4 +114,4 @@ export const projects: Project[] = [
       height: 1381,
     },
   },
-];
+]

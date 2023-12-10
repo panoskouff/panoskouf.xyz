@@ -1,6 +1,6 @@
-import { styled } from '#/styled-system/jsx';
-import Link from 'next/link';
-import { TextLink, Row } from '#/atoms';
+import { styled } from '#/styled-system/jsx'
+import Link from 'next/link'
+import { TextLink, Row } from '#/atoms'
 
 export const Navigation = () => (
   <Row justifyContent='space-between'>
@@ -16,4 +16,4 @@ export const Navigation = () => (
       <TextLink href='/cv.html'>📃CV</TextLink>
     </Row>
   </Row>
-);
+)

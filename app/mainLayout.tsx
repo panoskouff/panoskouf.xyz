@@ -1,14 +1,14 @@
-import { Position, Space, Flex, Background, Padding } from '#/atoms';
-import { SectionContainer } from '#/components/SectionContainer';
-import { Navigation } from '#/components/Navigation';
-import { Footer } from '#/components/Footer';
+import { Position, Space, Flex, Background, Padding } from '#/atoms'
+import { SectionContainer } from '#/components/SectionContainer'
+import { Navigation } from '#/components/Navigation'
+import { Footer } from '#/components/Footer'
 
 const expanded = {
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
-};
+}
 
 /* we need to do this because Next.js doesn't support
   having a layout with parallel routes in a grouped route */
@@ -16,8 +16,8 @@ export default function MainLayout({
   hero,
   children,
 }: {
-  hero: React.ReactNode;
-  children?: React.ReactNode;
+  hero: React.ReactNode
+  children?: React.ReactNode
 }) {
   return (
     <>
@@ -44,5 +44,5 @@ export default function MainLayout({
       <Space h='sp-lg' />
       <Footer />
     </>
-  );
+  )
 }

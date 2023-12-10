@@ -1,6 +1,6 @@
-import { defineConfig } from '@pandacss/dev';
-import { textStyles } from './theme/textStyles';
-import { keyframes } from './theme/keyframes';
+import { defineConfig } from '@pandacss/dev'
+import { textStyles } from './theme/textStyles'
+import { keyframes } from './theme/keyframes'
 
 export default defineConfig({
   // Whether to use css reset
@@ -66,4 +66,4 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: 'styled-system',
-});
+})

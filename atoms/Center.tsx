@@ -1,5 +1,5 @@
-import type { PandaDivProps } from '#/types';
-import { Flex } from './Flex';
+import type { PandaDivProps } from '#/types'
+import { Flex } from './Flex'
 
 /* prettier-ignore */
 export type CenterProps = PandaDivProps<
@@ -15,4 +15,4 @@ export const Center: React.FC<CenterProps> = ({ children, ...rest }) => (
   <Flex alignItems='center' justifyContent='center' {...rest}>
     {children}
   </Flex>
-);
+)

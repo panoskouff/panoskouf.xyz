@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
-import { experimental_useFormStatus as useFormStatus } from 'react-dom';
-import { styled } from '#/styled-system/jsx';
+import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import { styled } from '#/styled-system/jsx'
 
 export function SubmitButton() {
-  const { pending } = useFormStatus();
+  const { pending } = useFormStatus()
 
   return (
     <styled.button
@@ -23,5 +23,5 @@ export function SubmitButton() {
     >
       {pending ? <styled.h1 fontSize={50}>Loading...</styled.h1> : 'Submit'}
     </styled.button>
-  );
+  )
 }

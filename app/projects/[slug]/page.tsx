@@ -1,13 +1,13 @@
-import MainLayout from '../../mainLayout';
+import MainLayout from '../../mainLayout'
 // import { Project } from '../../../types/data';
-import { AspectRatioImage, Position, Space } from '#/atoms';
-import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro';
-import { styled } from '#/styled-system/jsx';
-import { projects as data } from '#/app/api/data';
+import { AspectRatioImage, Position, Space } from '#/atoms'
+import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro'
+import { styled } from '#/styled-system/jsx'
+import { projects as data } from '#/app/api/data'
 
 type ProjectPageProps = {
-  params: { slug: string };
-};
+  params: { slug: string }
+}
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   // @todo - my future api
@@ -15,14 +15,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   //   `http://localhost:3000/api/projects/${params.slug}`
   // ).then((res) => res.json());
 
-  const project = data.find((project) => project.slug === params.slug);
+  const project = data.find((project) => project.slug === params.slug)
 
   if (!project) {
     // this never happens because of the generateStaticParams function
-    return <div>There is not a project with this slug</div>;
+    return <div>There is not a project with this slug</div>
   }
 
-  const { title, description, projectUrl, githubUrl, image } = project;
+  const { title, description, projectUrl, githubUrl, image } = project
 
   return (
     <MainLayout
@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </>
       }
     />
-  );
+  )
 }
 
 export async function generateStaticParams() {
@@ -59,5 +59,5 @@ export async function generateStaticParams() {
   //   'http://localhost:3000/api/projects'
   // ).then((res) => res.json());
 
-  return data.map((project) => ({ slug: project.slug }));
+  return data.map((project) => ({ slug: project.slug }))
 }

@@ -1,5 +1,5 @@
 // import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
   // @todo rewrite old websites paths to new ones here

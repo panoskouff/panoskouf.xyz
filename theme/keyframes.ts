@@ -1,4 +1,4 @@
-import { defineKeyframes } from '@pandacss/dev';
+import { defineKeyframes } from '@pandacss/dev'
 
 export const keyframes = defineKeyframes({
   popInSlideDown: {
@@ -7,4 +7,4 @@ export const keyframes = defineKeyframes({
     '80%': { transform: 'translate3d(0, 0px, 0)' },
     '100%': { transform: 'translate3d(0, 110px, 0)' },
   },
-});
+})

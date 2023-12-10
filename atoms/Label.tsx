@@ -1,4 +1,4 @@
-import { HTMLStyledProps, styled } from '#/styled-system/jsx';
+import { HTMLStyledProps, styled } from '#/styled-system/jsx'
 
 export type PandaLabelProps = Pick<
   HTMLStyledProps<'label'>,
@@ -14,12 +14,12 @@ export type PandaLabelProps = Pick<
   | 'truncate'
   | 'textTransform'
   | 'css'
->;
+>
 
 export type LabelProps = Merge<
   Omit<React.LabelHTMLAttributes<HTMLLabelElement>, 'color'>,
   Partial<PandaLabelProps>
->;
+>
 
 export const Label: React.FC<LabelProps & { required?: boolean }> = ({
   children,
@@ -31,4 +31,4 @@ export const Label: React.FC<LabelProps & { required?: boolean }> = ({
     {/* @todo add color to panda config */}
     {required && <styled.span color='#ff0303'>&nbsp;*</styled.span>}
   </styled.label>
-);
+)

@@ -1,6 +1,6 @@
-import { defineTextStyles } from '@pandacss/dev';
+import { defineTextStyles } from '@pandacss/dev'
 
-type TextStyles = Parameters<typeof defineTextStyles>[0];
+type TextStyles = Parameters<typeof defineTextStyles>[0]
 
 const styles: TextStyles = {
   base: {
@@ -9,7 +9,7 @@ const styles: TextStyles = {
       fontFamily: 'mulish',
     },
   },
-};
+}
 
 // where is the default color for text configured ?
 // should I try to map color to these or is this a bad practice ?
@@ -76,4 +76,4 @@ export const textStyles = defineTextStyles({
       textTransform: 'uppercase',
     },
   },
-});
+})

@@ -1,10 +1,10 @@
-import { styled } from '#/styled-system/jsx';
-import { PandaButtonProps } from '#/types/';
-import { Text, Padding } from '#/atoms';
+import { styled } from '#/styled-system/jsx'
+import { PandaButtonProps } from '#/types/'
+import { Text, Padding } from '#/atoms'
 
 export type ButtonProps = PandaButtonProps<'display' | 'p' | 'css'> & {
-  text?: string;
-};
+  text?: string
+}
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -38,4 +38,4 @@ export const Button: React.FC<ButtonProps> = ({
     )}
     {children}
   </styled.button>
-);
+)

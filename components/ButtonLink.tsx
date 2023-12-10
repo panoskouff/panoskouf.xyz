@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import { css } from '../styled-system/css';
-import clsx from 'clsx';
+import Link from 'next/link'
+import { css } from '../styled-system/css'
+import clsx from 'clsx'
 
 type Props = {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-  href?: string;
-} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  children: React.ReactNode
+  style?: React.CSSProperties
+  href?: string
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 /* @todo refactor this component */
 const buttonLinkContainerStyles = css({
@@ -16,7 +16,7 @@ const buttonLinkContainerStyles = css({
   /* we need align-self otherwise it will
     take 100% of width if in flex container  */
   alignSelf: 'flex-start',
-});
+})
 
 const buttonLinkStyles = css({
   display: 'inline-block',
@@ -35,7 +35,7 @@ const buttonLinkStyles = css({
     transform: 'translate3d(0px, 0px, 0px) ',
     transitionDuration: '0.2s',
   },
-});
+})
 
 export const ButtonLink: React.FC<Props> = ({
   className,
@@ -46,5 +46,5 @@ export const ButtonLink: React.FC<Props> = ({
     <Link className={clsx(buttonLinkContainerStyles, className)} href={href}>
       <span className={buttonLinkStyles}>{children}</span>
     </Link>
-  );
-};
+  )
+}

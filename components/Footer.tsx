@@ -1,7 +1,7 @@
-import { Text } from '#/atoms';
-import { Background } from '#/atoms';
-import { Padding } from '#/atoms/Padding';
-import { SectionContainer } from '#/components/SectionContainer';
+import { Text } from '#/atoms'
+import { Background } from '#/atoms'
+import { Padding } from '#/atoms/Padding'
+import { SectionContainer } from '#/components/SectionContainer'
 
 export const Footer = () => (
   <Padding p='24px'>
@@ -21,4 +21,4 @@ export const Footer = () => (
       </Padding>
     </Background>
   </Padding>
-);
+)

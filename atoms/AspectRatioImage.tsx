@@ -1,24 +1,24 @@
-import clsx from 'clsx';
-import { css } from '../styled-system/css';
+import clsx from 'clsx'
+import { css } from '../styled-system/css'
 
 const aspectRatioBox = css({
   position: 'relative',
   height: 0,
-});
+})
 
 const image = css({
   position: 'absolute',
   width: '100%',
   height: 'auto',
   objectFit: 'cover',
-});
+})
 
 /* the way this component is built needs to be
     wrapped in a div that has width set */
 type AspectRatioImageProps = {
-  width: number;
-  height: number;
-} & React.AllHTMLAttributes<HTMLImageElement>;
+  width: number
+  height: number
+} & React.AllHTMLAttributes<HTMLImageElement>
 
 // @todo use picture element to support srcset
 export const AspectRatioImage = ({
@@ -55,5 +55,5 @@ export const AspectRatioImage = ({
         {...rest}
       />
     </div>
-  );
-};
+  )
+}

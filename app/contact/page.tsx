@@ -1,20 +1,20 @@
-'use client';
+'use client'
 // @todo refactor this to use mostly server components
 // import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 
-import { experimental_useFormState as useFormState } from 'react-dom';
-import { Text, Space, Center, Padding } from '#/atoms';
-import { styled } from '#/styled-system/jsx';
+import { experimental_useFormState as useFormState } from 'react-dom'
+import { Text, Space, Center, Padding } from '#/atoms'
+import { styled } from '#/styled-system/jsx'
 import {
   handleContactForm,
   ContactFormState,
-} from '#/components/ContactForm/action';
-import { ContactForm } from '#/components/ContactForm/ContactForm';
+} from '#/components/ContactForm/action'
+import { ContactForm } from '#/components/ContactForm/ContactForm'
 
 const initialState: ContactFormState = {
   submitted: false,
   ServerValidationSuccessful: false,
-};
+}
 
 /*
 useFormStatus looks up the status of the nearest <form> parent element,
@@ -29,8 +29,8 @@ export default function Contact() {
   const [state, formAction] = useFormState<ContactFormState>(
     // @ts-ignore
     handleContactForm,
-    initialState
-  );
+    initialState,
+  )
 
   return (
     <Center css={{ flexDirection: 'column', minHeight: '100%' }}>
@@ -50,7 +50,7 @@ export default function Contact() {
         </>
       )}
     </Center>
-  );
+  )
 }
 
 // https://nextjs.org/docs/app/building-your-application/data-fetching/forms-and-mutations#convention

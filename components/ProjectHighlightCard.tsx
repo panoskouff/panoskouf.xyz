@@ -1,20 +1,20 @@
-import { AspectRatioImage, Position, Space, Text } from '#/atoms';
+import { AspectRatioImage, Position, Space, Text } from '#/atoms'
 // @todo export atoms types from index
-import { Flex, FlexProps } from '#/atoms/Flex';
-import { Container } from '#/atoms/Container';
-import { ButtonLink } from './ButtonLink';
-import { Tag } from './Tag';
-import Link from 'next/link';
-import { styled } from '#/styled-system/jsx';
+import { Flex, FlexProps } from '#/atoms/Flex'
+import { Container } from '#/atoms/Container'
+import { ButtonLink } from './ButtonLink'
+import { Tag } from './Tag'
+import Link from 'next/link'
+import { styled } from '#/styled-system/jsx'
 
 type Props = FlexProps & {
-  kicker?: string;
-  title: string;
-  description: string;
-  projectUrl: string;
-  imageUrl: string;
-  tags: { id: string; text: string }[];
-};
+  kicker?: string
+  title: string
+  description: string
+  projectUrl: string
+  imageUrl: string
+  tags: { id: string; text: string }[]
+}
 
 export const ProjectHighlightCard: React.FC<Props> = ({
   kicker,
@@ -89,4 +89,4 @@ export const ProjectHighlightCard: React.FC<Props> = ({
       </Link>
     </Container>
   </Flex>
-);
+)

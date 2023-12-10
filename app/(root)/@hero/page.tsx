@@ -1,8 +1,8 @@
-import { Position } from '#/atoms';
-import { HeroHighlightIntro } from '#/components/HeroHighlightIntro';
-import { ScrollIndicator } from '#/components/ScrollIndicator';
-import { styled } from '#/styled-system/jsx';
-import { homeHero as data } from '#/app/api/data';
+import { Position } from '#/atoms'
+import { HeroHighlightIntro } from '#/components/HeroHighlightIntro'
+import { ScrollIndicator } from '#/components/ScrollIndicator'
+import { styled } from '#/styled-system/jsx'
+import { homeHero as data } from '#/app/api/data'
 // import { HeroHighlight } from '#/types/data';
 
 export default function HomeHero() {
@@ -19,5 +19,5 @@ export default function HomeHero() {
         <ScrollIndicator />
       </Position>
     </>
-  );
+  )
 }

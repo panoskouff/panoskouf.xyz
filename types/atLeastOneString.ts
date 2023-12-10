@@ -1,5 +1,5 @@
-export type AtLeastOneString = [string, ...string[]];
+export type AtLeastOneString = [string, ...string[]]
 
 export function isAtLeastOneString(arr: string[]): arr is AtLeastOneString {
-  return arr.length > 0;
+  return arr.length > 0
 }

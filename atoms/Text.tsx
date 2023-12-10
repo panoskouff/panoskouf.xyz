@@ -1,13 +1,13 @@
-import React from 'react';
-import { css as parsePandaCSS } from '../styled-system/css';
-import clsx from 'clsx';
+import React from 'react'
+import { css as parsePandaCSS } from '../styled-system/css'
+import clsx from 'clsx'
 
-type PandaCssProps = Parameters<typeof parsePandaCSS>[0];
+type PandaCssProps = Parameters<typeof parsePandaCSS>[0]
 
 export type PandaHTMLElementStyleProps<U extends keyof PandaCssProps> = Merge<
   Omit<React.HTMLAttributes<HTMLElement>, 'color'>,
   Partial<Pick<PandaCssProps, U>>
->;
+>
 
 /* prettier-ignore */
 type TextElements = Pick<
@@ -17,8 +17,8 @@ type TextElements = Pick<
 >;
 
 type Props = {
-  as?: keyof TextElements;
-  css?: PandaCssProps;
+  as?: keyof TextElements
+  css?: PandaCssProps
 } & PandaHTMLElementStyleProps<
   | 'textStyle'
   | 'fontFamily'
@@ -30,7 +30,7 @@ type Props = {
   | 'truncate'
   | 'textTransform'
   | 'color'
->;
+>
 
 // @todo solve import issue or rename component
 export const Text: React.FC<Props> = ({
@@ -65,10 +65,10 @@ export const Text: React.FC<Props> = ({
         truncate,
         textTransform,
         ...css,
-      })
+      }),
     )}
     {...rest}
   >
     {children}
   </Element>
-);
+)

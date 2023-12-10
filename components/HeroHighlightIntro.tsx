@@ -1,10 +1,10 @@
-import { Space, Text } from '#/atoms';
-import { ButtonLink } from '#/components/ButtonLink';
-import { HeroHighlight } from '../types/data';
+import { Space, Text } from '#/atoms'
+import { ButtonLink } from '#/components/ButtonLink'
+import { HeroHighlight } from '../types/data'
 
 type HeroHighlightIntroProps = HeroHighlight & {
-  ctaUrl?: string;
-};
+  ctaUrl?: string
+}
 
 export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
   title,
@@ -33,4 +33,4 @@ export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
     <Space />
     <ButtonLink href={ctaUrl}>{cta}</ButtonLink>
   </>
-);
+)

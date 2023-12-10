@@ -65,4 +65,4 @@ export const model = {
       title: 'Optional field, 500 characters max',
     },
   },
-} as const;
+} as const

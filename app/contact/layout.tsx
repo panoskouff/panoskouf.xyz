@@ -6,16 +6,16 @@ import {
   Padding,
   ColumnFullHeightWrapper,
   RemainingHeightContainer,
-} from '#/atoms';
-import { SectionContainer } from '#/components/SectionContainer';
-import { Navigation } from '#/components/Navigation';
-import { Footer } from '#/components/Footer';
-import { styled } from '#/styled-system/jsx';
+} from '#/atoms'
+import { SectionContainer } from '#/components/SectionContainer'
+import { Navigation } from '#/components/Navigation'
+import { Footer } from '#/components/Footer'
+import { styled } from '#/styled-system/jsx'
 
 export default function ContactLayout({
   children,
 }: {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }) {
   return (
     <>
@@ -44,5 +44,5 @@ export default function ContactLayout({
         </SectionContainer>
       </Column>
     </>
-  );
+  )
 }

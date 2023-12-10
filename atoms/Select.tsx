@@ -1,15 +1,15 @@
-import { HTMLStyledProps, styled } from '#/styled-system/jsx';
+import { HTMLStyledProps, styled } from '#/styled-system/jsx'
 
 // @todo find out what props make sense to allow here
 export type PandaSelectProps = Pick<
   HTMLStyledProps<'select'>,
   'p' | 'flexGrow' | 'css'
->;
+>
 
 export type SelectProps = Merge<
   Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'color'>,
   Partial<PandaSelectProps>
->;
+>
 
 export const Select: React.FC<SelectProps> = ({ children, ...rest }) => (
   <styled.select
@@ -20,4 +20,4 @@ export const Select: React.FC<SelectProps> = ({ children, ...rest }) => (
   >
     {children}
   </styled.select>
-);
+)

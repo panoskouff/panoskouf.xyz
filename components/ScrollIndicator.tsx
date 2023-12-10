@@ -1,9 +1,9 @@
-import { Mask, Transform } from '#/atoms';
-import { styled } from '#/styled-system/jsx';
+import { Mask, Transform } from '#/atoms'
+import { styled } from '#/styled-system/jsx'
 
 type Props = {
-  sideText?: string;
-};
+  sideText?: string
+}
 
 export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
   <Mask w={46} h={105}>
@@ -23,4 +23,4 @@ export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
       {sideText}
     </Transform>
   </Mask>
-);
+)

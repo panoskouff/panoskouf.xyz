@@ -1,15 +1,15 @@
-import { HTMLStyledProps, styled } from '#/styled-system/jsx';
+import { HTMLStyledProps, styled } from '#/styled-system/jsx'
 
 // @todo find out what props make sense to allow here
 export type PandaTextAreaProps = Pick<
   HTMLStyledProps<'textarea'>,
   'p' | 'flexGrow' | 'css'
->;
+>
 
 export type TextAreaProps = Merge<
   Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'color'>,
   Partial<PandaTextAreaProps>
->;
+>
 
 export const TextArea: React.FC<TextAreaProps> = ({ children, ...rest }) => (
   <styled.textarea
@@ -20,4 +20,4 @@ export const TextArea: React.FC<TextAreaProps> = ({ children, ...rest }) => (
   >
     {children}
   </styled.textarea>
-);
+)

@@ -1,5 +1,5 @@
-import type { PandaDivProps } from '#/types';
-import { Flex } from './Flex';
+import type { PandaDivProps } from '#/types'
+import { Flex } from './Flex'
 
 /* prettier-ignore */
 export type ColumnProps = PandaDivProps<
@@ -16,4 +16,4 @@ export const Column: React.FC<ColumnProps> = ({ children, ...rest }) => (
   <Flex flexDirection='column' {...rest}>
     {children}
   </Flex>
-);
+)

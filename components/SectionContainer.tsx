@@ -1,8 +1,8 @@
-import { Flex, FlexProps } from '#/atoms/Flex';
-import { HTMLStyledProps, styled } from '#/styled-system/jsx';
+import { Flex, FlexProps } from '#/atoms/Flex'
+import { HTMLStyledProps, styled } from '#/styled-system/jsx'
 
 export type SectionContainerProps = FlexProps &
-  Partial<Pick<HTMLStyledProps<'div'>, 'maxW' | 'mx'>>;
+  Partial<Pick<HTMLStyledProps<'div'>, 'maxW' | 'mx'>>
 
 // @todo move a version of this in atoms and drop Container from there
 // @todo find a way to differentiate between maxWidth, pos of of flex and div
@@ -26,7 +26,7 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
       {children}
     </styled.div>
   </Flex>
-);
+)
 
 /*
 if I want to set position for styled.div I can do

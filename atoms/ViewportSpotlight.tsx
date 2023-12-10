@@ -1,9 +1,9 @@
-import { styled } from '#/styled-system/jsx';
-import type { PandaDivProps } from '#/types';
+import { styled } from '#/styled-system/jsx'
+import type { PandaDivProps } from '#/types'
 
 export type ViewportSpotlightProps = PandaDivProps<
   'justifyContent' | 'alignItems' | 'display' | 'h' | 'css'
->;
+>
 
 /**
  * The ViewportSpotlight component is used to shown 1 item in the whole viewport.
@@ -20,4 +20,4 @@ export const ViewportSpotlight: React.FC<ViewportSpotlightProps> = ({
   <styled.div display='flex' alignItems='center' h='100vh' {...rest}>
     {children}
   </styled.div>
-);
+)

@@ -1,7 +1,7 @@
-import { Space } from '#/atoms';
-import { ProjectHighlightCard } from '#/components/ProjectHighlightCard';
-import { SectionContainer } from '#/components/SectionContainer';
-import { projects as data } from '#/app/api/data';
+import { Space } from '#/atoms'
+import { ProjectHighlightCard } from '#/components/ProjectHighlightCard'
+import { SectionContainer } from '#/components/SectionContainer'
+import { projects as data } from '#/app/api/data'
 // import { Project } from '#/types/data';
 
 export default function HomeContent() {
@@ -17,7 +17,7 @@ export default function HomeContent() {
       <Space h='sp-lg' />
       <Space h='sp-xl' />
       {data.flatMap((project, index, array) => {
-        const isLastProject = index === array.length - 1;
+        const isLastProject = index === array.length - 1
 
         return [
           <ProjectHighlightCard
@@ -35,10 +35,10 @@ export default function HomeContent() {
                 <Space h='sp-xl' key={`space2-${project.slug}`} />,
               ]
             : []),
-        ];
+        ]
       })}
       <Space h='sp-md' />
       <Space h='sp-lg' />
     </SectionContainer>
-  );
+  )
 }

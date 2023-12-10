@@ -1,10 +1,10 @@
-import { TextAlign, Text, Space, TextLink } from '#/atoms';
-import { ProjectHighlight } from '../types/data';
+import { TextAlign, Text, Space, TextLink } from '#/atoms'
+import { ProjectHighlight } from '../types/data'
 
 type ProjectHighlightIntroProps = Pick<
   ProjectHighlight,
   'kicker' | 'title' | 'description' | 'projectUrl' | 'projectCTA'
->;
+>
 
 // @todo is it a better practice to have default values
 // for everything or let it break if value is missing in CMS ?
@@ -32,4 +32,4 @@ export const ProjectHighlightIntro: React.FC<ProjectHighlightIntroProps> = ({
       {projectCTA}
     </TextLink>
   </TextAlign>
-);
+)

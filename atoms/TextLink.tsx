@@ -1,6 +1,6 @@
-import { css } from '../styled-system/css';
-import Link, { LinkProps } from 'next/link';
-import clsx from 'clsx';
+import { css } from '../styled-system/css'
+import Link, { LinkProps } from 'next/link'
+import clsx from 'clsx'
 
 // @todo add this to test styles definitions ?
 const textLink = css({
@@ -13,11 +13,11 @@ const textLink = css({
     boxShadow: 'inset 0px -7px 0px 0px var(--colors-text-color-tertiary)',
     transform: 'scale(1.025)',
   },
-});
+})
 
 export type TextLinkProps = LinkProps & {
-  openInNewTab?: boolean;
-} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  openInNewTab?: boolean
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 export const TextLink = ({
   className,
@@ -35,4 +35,4 @@ export const TextLink = ({
   >
     {children}
   </Link>
-);
+)

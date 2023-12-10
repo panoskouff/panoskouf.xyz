@@ -1,11 +1,11 @@
-import { styled } from '#/styled-system/jsx';
-import type { PandaDivProps } from '#/types';
-import { Position } from './Position';
-import { Transform } from './Transform';
+import { styled } from '#/styled-system/jsx'
+import type { PandaDivProps } from '#/types'
+import { Position } from './Position'
+import { Transform } from './Transform'
 
 /* example usage https://codepen.io/Panagiotis-Koufopoulos/pen/ZEVNqZm */
 
-export type ColumnFullHeightWrapperProps = PandaDivProps<'css'>;
+export type ColumnFullHeightWrapperProps = PandaDivProps<'css'>
 
 export const ColumnFullHeightWrapper: React.FC<
   ColumnFullHeightWrapperProps
@@ -13,9 +13,9 @@ export const ColumnFullHeightWrapper: React.FC<
   <styled.div display='flex' flexDirection='column' h='100%' {...rest}>
     {children}
   </styled.div>
-);
+)
 
-export type RemainingHeightContainerProps = PandaDivProps<'css'>;
+export type RemainingHeightContainerProps = PandaDivProps<'css'>
 
 export const RemainingHeightContainer: React.FC<
   RemainingHeightContainerProps
@@ -23,11 +23,11 @@ export const RemainingHeightContainer: React.FC<
   <styled.div flex={1} overflow='auto' {...rest}>
     {children}
   </styled.div>
-);
+)
 
 export type FlexibleHeightProps = PandaDivProps<'h' | 'css'> & {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 /**
  * The FlexibleHeight component is designed to manage layouts where a
@@ -60,4 +60,4 @@ export const FlexibleHeight: React.FC<FlexibleHeightProps> = ({
       {children}
     </Transform>
   </Position>
-);
+)

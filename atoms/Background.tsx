@@ -1,5 +1,5 @@
-import { PandaDivProps } from '#/types';
-import { styled } from '../styled-system/jsx';
+import { PandaDivProps } from '#/types'
+import { styled } from '../styled-system/jsx'
 
 export type BackgroundProps = PandaDivProps<
   | 'bg'
@@ -15,9 +15,9 @@ export type BackgroundProps = PandaDivProps<
   | 'backgroundOrigin'
   | 'rounded'
   | 'css'
->;
+>
 
 export const Background: React.FC<BackgroundProps> = ({
   children,
   ...rest
-}) => <styled.div {...rest}>{children}</styled.div>;
+}) => <styled.div {...rest}>{children}</styled.div>
