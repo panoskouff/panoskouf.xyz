@@ -1,9 +1,8 @@
 import { styled } from '#/styled-system/jsx';
-import type { PandaComponentProps } from '#/types';
+import type { PandaDivProps } from '#/types';
 
 /* prettier-ignore */
-export type ContainerProps = PandaComponentProps<
-  'div',
+export type ContainerProps = PandaDivProps<
   | 'w'
   | 'minW'
   | 'maxW'

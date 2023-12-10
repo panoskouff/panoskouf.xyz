@@ -1,8 +1,7 @@
 import { styled } from '#/styled-system/jsx';
-import type { PandaComponentProps } from '#/types';
+import type { PandaDivProps } from '#/types';
 
-export type PaddingProps = PandaComponentProps<
-  'div',
+export type PaddingProps = PandaDivProps<
   'p' | 'pl' | 'pr' | 'pt' | 'pb' | 'px' | 'py' | 'ps' | 'pe' | 'css'
 >;
 

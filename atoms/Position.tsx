@@ -1,4 +1,4 @@
-import { PandaComponentProps } from '#/types';
+import { PandaDivProps } from '#/types';
 import { styled } from '../styled-system/jsx';
 
 export type PositionPandaProperties =
@@ -8,12 +8,10 @@ export type PositionPandaProperties =
   | 'bottom'
   | 'left'
   | 'insetStart'
-  | 'insetEnd';
+  | 'insetEnd'
+  | 'h';
 
-type PositionProps = PandaComponentProps<
-  'div',
-  PositionPandaProperties | 'css'
->;
+type PositionProps = PandaDivProps<PositionPandaProperties | 'css'>;
 
 export const Position: React.FC<PositionProps> = ({ children, ...rest }) => (
   <styled.div pos='absolute' {...rest}>

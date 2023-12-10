@@ -1,8 +1,7 @@
 import { styled } from '#/styled-system/jsx';
-import type { PandaComponentProps } from '#/types';
+import type { PandaDivProps } from '#/types';
 
-export type FlexProps = PandaComponentProps<
-  'div',
+export type FlexProps = PandaDivProps<
   | 'display'
   | 'flexDirection'
   | 'flexWrap'

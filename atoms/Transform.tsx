@@ -1,20 +1,19 @@
-import { PandaComponentProps } from "#/types";
-import { Position, PositionPandaProperties } from "./Position";
+import { PandaDivProps } from '#/types';
+import { Position, PositionPandaProperties } from './Position';
 
 export type TransformPandaProperties =
   | PositionPandaProperties
-  | "transform"
-  | "transformOrigin"
-  | "transformStyle"
-  | "backfaceVisibility"
-  | "perspective"
-  | "perspectiveOrigin"
-  | "visibility";
+  | 'transform'
+  | 'transformOrigin'
+  | 'transformStyle'
+  | 'backfaceVisibility'
+  | 'perspective'
+  | 'perspectiveOrigin'
+  | 'visibility'
+  | 'h'
+  | 'w';
 
-type TransformProps = PandaComponentProps<
-  "div",
-  TransformPandaProperties | "css"
->;
+type TransformProps = PandaDivProps<TransformPandaProperties | 'css'>;
 
 const expanded = {
   top: 0,
@@ -24,7 +23,7 @@ const expanded = {
 };
 
 export const Transform: React.FC<TransformProps> = ({ children, ...rest }) => (
-  <Position pos="absolute" {...expanded} {...rest}>
+  <Position pos='absolute' {...expanded} {...rest}>
     {children}
   </Position>
 );

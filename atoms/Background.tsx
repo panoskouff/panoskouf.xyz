@@ -1,8 +1,7 @@
-import { PandaComponentProps } from '#/types';
+import { PandaDivProps } from '#/types';
 import { styled } from '../styled-system/jsx';
 
-export type BackgroundProps = PandaComponentProps<
-  'div',
+export type BackgroundProps = PandaDivProps<
   | 'bg'
   | 'backgroundColor'
   | 'backgroundImage'

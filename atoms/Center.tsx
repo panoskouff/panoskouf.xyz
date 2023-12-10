@@ -1,9 +1,8 @@
-import type { PandaComponentProps } from '#/types';
+import type { PandaDivProps } from '#/types';
 import { Flex } from './Flex';
 
 /* prettier-ignore */
-export type CenterProps = PandaComponentProps<
-  'div',
+export type CenterProps = PandaDivProps<
   | 'alignItems'
   | 'justifyContent'
   | 'gap'

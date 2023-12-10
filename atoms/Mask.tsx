@@ -1,7 +1,7 @@
-import { PandaComponentProps } from '#/types';
+import { PandaDivProps } from '#/types';
 import { styled } from '../styled-system/jsx';
 
-type MaskProps = PandaComponentProps<'div', 'pos' | 'w' | 'h' | 'css'>;
+type MaskProps = PandaDivProps<'pos' | 'w' | 'h' | 'css'>;
 
 export const Mask: React.FC<MaskProps> = ({ children, ...rest }) => (
   // @todo should I inherit from Position here and have absolute with 0s as a default?
