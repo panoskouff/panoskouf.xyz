@@ -3,6 +3,13 @@ import { SectionContainer } from '#/components/SectionContainer';
 import { Navigation } from '#/components/Navigation';
 import { Footer } from '#/components/Footer';
 
+const expanded = {
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+};
+
 /* we need to do this because Next.js doesn't support
   having a layout with parallel routes in a grouped route */
 export default function MainLayout({
@@ -15,7 +22,7 @@ export default function MainLayout({
   return (
     <>
       <Flex flexDirection='column' css={{ pos: 'relative', minH: '100vh' }}>
-        <Position pos='absolute' css={{ h: '100vh', zIndex: -1 }}>
+        <Position pos='absolute' {...expanded} css={{ h: '100vh', zIndex: -1 }}>
           <Padding p='24px' css={{ h: '100%' }}>
             <Background
               bg='bg-color-secondary'

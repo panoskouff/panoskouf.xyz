@@ -15,7 +15,7 @@ export default function HomeHero() {
     <>
       <styled.div h='15vh' />
       <HeroHighlightIntro {...data} />
-      <Position left='auto' top='auto' right='0' bottom='12px'>
+      <Position right='0' bottom='12px'>
         <ScrollIndicator />
       </Position>
     </>

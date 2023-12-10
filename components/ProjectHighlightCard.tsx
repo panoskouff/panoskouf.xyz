@@ -58,7 +58,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
       <Link href={projectUrl}>
         <Position pos='relative' css={{ w: '100%' }}>
           <AspectRatioImage src={imageUrl} width={506} height={431.5} />
-          <Position left='-24px' bottom='-24px' top='auto' right='auto'>
+          <Position left='-24px' bottom='-24px'>
             <styled.img
               src='/images/dot-pattern-min.png'
               w='100px'
@@ -66,7 +66,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
               display='inline-block'
             />
           </Position>
-          <Position left='auto' bottom='-44px' top='auto' right='auto'>
+          <Position bottom='-44px'>
             {/* @todo https://panda-css.com/docs/guides/dynamic-styling */}
             <Flex gap='12px' alignItems='center'>
               {/* <Text
