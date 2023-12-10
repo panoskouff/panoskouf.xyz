@@ -65,4 +65,15 @@ export const textStyles = defineTextStyles({
       textTransform: 'uppercase',
     },
   },
+  button: {
+    description: 'The button text style',
+    value: {
+      ...styles.base.value,
+      fontSize: '14px',
+      lineHeight: '110%',
+      fontWeight: 600,
+      letterSpacing: '0.2em',
+      textTransform: 'uppercase',
+    },
+  },
 });
