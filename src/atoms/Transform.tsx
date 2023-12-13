@@ -10,6 +10,7 @@ export type TransformPandaProperties =
   | 'perspective'
   | 'perspectiveOrigin'
   | 'visibility'
+  | 'transition'
   | 'h'
   | 'w'
 

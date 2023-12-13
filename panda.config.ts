@@ -13,7 +13,13 @@ export default defineConfig({
     './src/app/**/*.{ts,tsx,js,jsx}',
   ],
   exclude: [],
-
+  conditions: {
+    extend: {
+      projectHighlightCard: '&:is(.projectHighlightCard)',
+      projectHighlightCardAncestor: '.projectHighlightCard &',
+      projectHighlightCardHoverAncestor: '.projectHighlightCard:hover &',
+    }
+  },
   theme: {
     breakpoints: {
       sm: '480px',

@@ -9,6 +9,7 @@ export type PositionPandaProperties =
   | 'left'
   | 'insetStart'
   | 'insetEnd'
+  | 'w'
   | 'h'
 
 type PositionProps = PandaDivProps<PositionPandaProperties | 'css'>
