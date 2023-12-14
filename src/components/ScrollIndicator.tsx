@@ -13,7 +13,6 @@ export const ScrollIndicator: React.FC<Props> = ({ sideText = 'scroll' }) => (
       bgColor='text-color-primary'
       animation='popInSlideDown 4s var(--easings-swift-decelerate) 1s infinite'
     />
-    {/* @todo use Text instead css ?*/}
     <Transform
       top={3}
       left={40}

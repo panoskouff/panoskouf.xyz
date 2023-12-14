@@ -1,6 +1,8 @@
 ### project route
 
 - Background component should be renamed and merged with Container and also have box shadow and border options
+- add mobile navigation
+- fix homepage hero description text not breaking correctly - maybe use https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
 - add shadow to project image
 - make all pages responsive
 - add responsive header

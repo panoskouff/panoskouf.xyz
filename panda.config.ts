@@ -18,6 +18,7 @@ export default defineConfig({
       projectHighlightCard: '&:is(.projectHighlightCard)',
       projectHighlightCardAncestor: '.projectHighlightCard &',
       projectHighlightCardHoverAncestor: '.projectHighlightCard:hover &',
+      navIsOpen: '&:is([data-nav-is-open="true"], [data-nav-is-open="true"] &)',
     }
   },
   theme: {

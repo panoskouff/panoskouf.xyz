@@ -7,7 +7,6 @@ import {
   Text,
   Transform,
 } from '#/atoms'
-// @todo export atoms types from index
 import { Flex, FlexProps } from '#/atoms/Flex'
 import { Container } from '#/atoms/Container'
 import { ButtonLink } from './ButtonLink'
