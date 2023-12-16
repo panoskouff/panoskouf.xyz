@@ -1,3 +1,7 @@
+/* @todo
+  - avoid css function
+  - generic multiple variant approach
+ */
 import { css } from '../styled-system/css'
 import Link, { LinkProps } from 'next/link'
 import clsx from 'clsx'
@@ -15,8 +19,17 @@ const textLink = css({
   },
 })
 
+const textLinkVariant = css({
+  boxShadow: 'none',
+  '&:hover': {
+    boxShadow: 'none',
+    transform: 'none',
+  },
+})
+
 export type TextLinkProps = LinkProps & {
   openInNewTab?: boolean
+  variant?: boolean
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 export const TextLink = ({
@@ -24,10 +37,12 @@ export const TextLink = ({
   children,
   href,
   openInNewTab = false,
+  variant = false,
   ...rest
 }: TextLinkProps) => (
   <Link
-    className={clsx(textLink, className)}
+    // add textLinkVariant to className if variant is true
+    className={clsx(textLink, className, variant && textLinkVariant)}
     href={href}
     target={openInNewTab ? '_blank' : undefined}
     rel={openInNewTab ? 'noopener noreferrer' : undefined}

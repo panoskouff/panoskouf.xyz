@@ -34,12 +34,12 @@ export const ProjectHighlightCard: React.FC<Props> = ({
   ...rest
 }) => (
   <Flex
-    gap='80px'
+    gap='60px'
     flexDirection={{ base: 'column', md: 'row' }}
     css={{ flexGrow: 1 }}
     {...rest}
   >
-    <Container w={{ base: '100%', md: '54%' }} css={{ alignSelf: 'center' }}>
+    <Container w={{ base: '100%', md: '50%' }} css={{ alignSelf: 'center' }}>
       <Text as='h4' textStyle='caption' color='text-color-tertiary'>
         {kicker}
       </Text>
@@ -61,7 +61,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
       <Space h='sp-md' />
       <ButtonLink href={projectUrl}>View Project</ButtonLink>
     </Container>
-    <Container w={{ base: '100%', md: '46%' }} css={{ alignSelf: 'center' }}>
+    <Container w={{ base: '100%', md: '50%' }} css={{ alignSelf: 'center' }}>
       <Link href={projectUrl}>
         <Position
           className='projectHighlightCard'

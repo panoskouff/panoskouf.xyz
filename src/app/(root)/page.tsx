@@ -14,6 +14,7 @@ export default function HomeContent() {
 
   return (
     <SectionContainer css={{ pos: 'relative' }}>
+      {/* consider constraining main content to around 850px */}
       <Space h='sp-lg' />
       <Space h='sp-xl' />
       {data.flatMap((project, index, array) => {
