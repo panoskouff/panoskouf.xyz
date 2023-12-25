@@ -11,26 +11,31 @@ export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
   description,
   cta,
   ctaUrl = '#',
-}) => (
-  <>
-    <Text
-      as='h1'
-      textStyle='title'
-      color='text-color-primary'
-      css={{ whiteSpace: 'pre-line' }}
-    >
-      {title}
-    </Text>
-    <Space h='sp-sm' />
-    <Text
-      as='p'
-      textStyle='body'
-      css={{ maxWidth: 600, whiteSpace: 'pre-line' }}
-    >
-      {description}
-    </Text>
-    <Space h='sp-xs' />
-    <Space />
-    <ButtonLink href={ctaUrl}>{cta}</ButtonLink>
-  </>
-)
+}) => {
+  const createMarkup = () => {
+    return { __html: description }
+  }
+
+  return (
+    <>
+      <Text
+        as='h1'
+        textStyle='title'
+        color='text-color-primary'
+        css={{ whiteSpace: 'pre-line' }}
+      >
+        {title}
+      </Text>
+      <Space h='sp-sm' />
+      <Text
+        as='p'
+        textStyle='body'
+        css={{ maxWidth: 600, whiteSpace: 'pre-line' }}
+        dangerouslySetInnerHTML={createMarkup()}
+      />
+      <Space h='sp-xs' />
+      <Space />
+      <ButtonLink href={ctaUrl}>{cta}</ButtonLink>
+    </>
+  )
+}

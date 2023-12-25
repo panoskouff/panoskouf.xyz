@@ -1,6 +1,8 @@
+import { TrustedHtmlString } from './opaqueTypes'
+
 export type HeroHighlight = {
   title: string
-  description: string
+  description: TrustedHtmlString
   cta: string
 }
 
