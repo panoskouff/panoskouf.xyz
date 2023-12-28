@@ -21,7 +21,7 @@ export default function ContactLayout({
     <>
       <Column css={{ pos: 'relative', minH: '100vh' }}>
         <Position pos='absolute' css={{ h: '100%', zIndex: -1 }}>
-          <Padding p='24px' css={{ h: '100%' }}>
+          <Padding p={{ base: '24px 12px', md: '24px' }} css={{ h: '100%' }}>
             <Background
               bg='bg-color-secondary'
               rounded='16px'

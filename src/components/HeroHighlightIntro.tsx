@@ -30,12 +30,15 @@ export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
       <Text
         as='p'
         textStyle='body'
+        fontSize={{ base: '16px', md: '18px' }}
+        lineHeight={{ base: '24px', md: '32px' }}
         css={{ maxWidth: 600, whiteSpace: 'pre-line' }}
         dangerouslySetInnerHTML={createMarkup()}
       />
       <Space h='sp-xs' />
       <Space />
       <ButtonLink href={ctaUrl}>{cta}</ButtonLink>
+      <Space />
     </>
   )
 }

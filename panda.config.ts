@@ -47,7 +47,6 @@ export default defineConfig({
       spacing: {
         // padding
         'input-padding-base': { value: '10px' },
-        'section-offset': { value: '84px' },
       },
       radii: {
         sm: { value: '5px' },
@@ -65,6 +64,9 @@ export default defineConfig({
         'sp-lg': { value: '64px' },
         'sp-xl': { value: { base: '70px', lg: '140px' } },
       },
+      spacing: {
+        'section-offset': { value: { base: '44px', md: '84px'} },
+      }
     },
     extend: { textStyles, keyframes },
   },

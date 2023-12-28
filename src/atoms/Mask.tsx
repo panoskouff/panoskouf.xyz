@@ -1,7 +1,7 @@
 import { PandaDivProps } from '#/types'
 import { styled } from '../styled-system/jsx'
 
-type MaskProps = PandaDivProps<'pos' | 'w' | 'h' | 'css'>
+export type MaskProps = PandaDivProps<'pos' | 'w' | 'h' | 'css'>
 
 export const Mask: React.FC<MaskProps> = ({ children, ...rest }) => (
   // can I skip position attribute here ?

@@ -9,6 +9,8 @@ export type ColumnProps = PandaDivProps<
   | 'alignItems'
   | 'alignContent'
   | 'gap'
+  | 'h'
+  | 'w'
   | 'css'
 >;
 

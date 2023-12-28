@@ -12,3 +12,5 @@
 - add google analytics
 - fix all layouts similar to contact page layout
 - check if next fixed the bug in layouts that didn't allow nesting to work
+- @todo check if all vh amounts look fine on different screen heights
+- @todo different and simpler hero for homepage
