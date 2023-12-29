@@ -39,7 +39,7 @@ export const ProjectHighlightCard: React.FC<Props> = ({
     css={{ flexGrow: 1 }}
     {...rest}
   >
-    <Container w={{ base: '100%', md: '50%' }} css={{ alignSelf: 'center' }}>
+    <Container w={{ base: '100%', md: '55%' }} css={{ alignSelf: 'center' }}>
       <Text as='h4' textStyle='caption' color='text-color-tertiary'>
         {kicker}
       </Text>
@@ -61,12 +61,13 @@ export const ProjectHighlightCard: React.FC<Props> = ({
       <Space h='sp-md' />
       <ButtonLink href={projectUrl}>View Project</ButtonLink>
     </Container>
-    <Container w={{ base: '100%', md: '50%' }} css={{ alignSelf: 'center' }}>
+    <Container w={{ base: '100%', md: '45%' }} css={{ alignSelf: 'center' }}>
       <Link href={projectUrl}>
         <Position
           className='projectHighlightCard'
           pos='relative'
-          css={{ w: '100%' }}
+          left='24px'
+          css={{ w: 'calc(100% - 24px)' }}
         >
           <Transform
             pos='relative'
@@ -79,10 +80,10 @@ export const ProjectHighlightCard: React.FC<Props> = ({
           >
             <AspectRatioImage src={imageUrl} width={506} height={431.5} />
           </Transform>
-          <Position>
+          <Position w='100%'>
             {/* we add the actual space that our absolute positioned elements 
               create so hover state is not broken between our two elements  */}
-            <Space h='24px' />
+            <Space h='48px' w='100%' />
           </Position>
           <Position left='-24px' bottom='-24px'>
             <styled.img

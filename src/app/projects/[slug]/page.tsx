@@ -4,6 +4,12 @@ import { AspectRatioImage, Position, Space } from '#/atoms'
 import { ProjectHighlightIntro } from '#/components/ProjectHighlightIntro'
 import { styled } from '#/styled-system/jsx'
 import { projects as data } from '#/app/api/data'
+import { css } from '#/styled-system/css'
+
+const imageStyles = css({
+  boxShadow: '0 0 30px 0 rgba(0, 0, 0, 0.15)',
+  borderRadius: 'lg',
+})
 
 type ProjectPageProps = {
   params: { slug: string }
@@ -45,6 +51,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               src={image.src}
               width={image.width}
               height={image.height}
+              className={imageStyles}
             />
           </Position>
         </>

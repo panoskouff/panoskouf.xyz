@@ -16,7 +16,9 @@
     "lint": "pnpm eslint --ext .js,.jsx,.ts,.tsx .",
     "format": "pnpm prettier --write .",
     "test:watch": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "debug:css": "panda debug",
+    "analyze:css": "panda analyze"
   },
   "dependencies": {
     "clsx": "^1.2.1",

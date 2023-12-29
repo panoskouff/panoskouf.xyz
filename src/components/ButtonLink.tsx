@@ -11,7 +11,7 @@ type Props = {
 /* @todo refactor this component */
 const buttonLinkContainerStyles = css({
   display: 'inline-block',
-  borderRadius: 'sm',
+  borderRadius: 'md',
   boxShadow: 'inset 0 0 0 3px var(--colors-text-color-primary)',
   /* we need align-self otherwise it will
     take 100% of width if in flex container  */
@@ -23,8 +23,8 @@ const buttonLinkStyles = css({
   lineHeight: '25px',
   border: '3px solid var(--colors-text-color-primary)',
   minWidth: '200px',
-  padding: '11px 32px 12px',
-  borderRadius: 'sm',
+  padding: '12px 32px 13px',
+  borderRadius: 'md',
   background: 'var(--colors-text-color-primary)',
   textAlign: 'center',
   transform: 'translate3d(-8px, -8px, 0px) ',

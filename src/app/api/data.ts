@@ -4,11 +4,11 @@ import { HeroHighlight } from '#/types/data'
 import { TrustedHtmlString } from '#/types'
 
 export const homeHero: HeroHighlight = {
-  title: `Hi, I’m Panos,
-  Front End Engineer`,
+  title: `Hi, I’m Panos<br />Front End Engineer` as TrustedHtmlString,
   description:
-    'I love everything TypeScript.  <br /> Besides front end development, <br /> I am interested in Node.js, Ionic and BaaS. <br /> My favorite framework is React.' as TrustedHtmlString,
+    'I love everything TypeScript. Besides front end development, I am interested in Node.js and BaaS. My favorite framework is React.' as TrustedHtmlString,
   cta: 'see my work',
+  ctaUrl: '#Portfolio',
 }
 
 const tags = {

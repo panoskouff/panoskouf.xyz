@@ -23,14 +23,14 @@ export default defineConfig({
   },
   theme: {
     breakpoints: {
-      sm: '480px',
+      sm: '420px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
     },
     tokens: {
       fonts: {
-        mulish: { value: 'var(--mulish), sans-serif' },
+        mulish: { value: 'var(--mulish), system-ui, sans-serif' },
         tinos: { value: 'var(--tinos), serif' },
       },
       colors: {
@@ -42,7 +42,8 @@ export default defineConfig({
         'text-color-tertiary': { value: '#b7b4b9' },
       },
       sizes: {
-        'section-max-width': { value: '1300px' },
+        'hero-max-width': { value: '800px' },
+        'section-max-width': { value: '800px' },
       },
       spacing: {
         // padding
@@ -50,6 +51,7 @@ export default defineConfig({
       },
       radii: {
         sm: { value: '5px' },
+        md: { value: '10px' },
         lg: { value: '16px' },
       },
       easings: {

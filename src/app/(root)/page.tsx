@@ -9,15 +9,22 @@ import { homeHero as heroData } from '#/app/api/data'
 import { ProjectHighlightCard } from '#/components/ProjectHighlightCard'
 import { projects as projectsData } from '#/app/api/data'
 
-const paddingOffset = 24
-const contentHeight = `calc(100vh - ${paddingOffset * 2}px)`
+// @todo - these fail to compile correctly if I make changes to panda.config.ts
+// const paddingOffset = 24
+// const contentHeight = `calc(100vh - ${paddingOffset * 2}px)`
 
 const AbsolutelyPlacedScrollIndicator = () => (
-  <Position top={0} left={0} right={0} h={contentHeight}>
+  <Position
+    top={0}
+    left={0}
+    right={0}
+    h='calc(100vh - 48px)'
+    css={{ pointerEvents: 'none' }}
+  >
     {/* Get a reference to the bottom of the screen that doesn't
-              exceed 100vh even if our height exceeds 100vh. We don't use
-              fixed because we want our scrollIndicator position to be 
-              within the constrained layout width */}
+      exceed 100vh even if our height exceeds 100vh. We don't use
+      fixed because we want our scrollIndicator position to be 
+      within the constrained layout width */}
     <Position right='0' bottom='-12px'>
       <ScrollIndicator css={{ display: { base: 'none', sm: 'block' } }} />
     </Position>
@@ -38,21 +45,19 @@ export default function HomeContent() {
     <>
       <Padding p={24}>
         <Background bg='bg-color-secondary' rounded='16px'>
-          <SectionContainer css={{ flexGrow: 1 }}>
-            <Position pos='relative' css={{ minH: contentHeight }}>
-              {/* We place ScrollIndicator first so that
-                it doesn't overlay other elements */}
-              <AbsolutelyPlacedScrollIndicator />
+          <SectionContainer maxW='hero-max-width' css={{ flexGrow: 1 }}>
+            <Position pos='relative' css={{ minH: 'calc(100vh - 48px)' }}>
               <Space h='24px' />
               <Navigation />
+              {/* @todo change vh to px */}
               <styled.div h={{ base: '5vh', md: '15vh' }} />
               <HeroHighlightIntro {...heroData} />
+              <AbsolutelyPlacedScrollIndicator />
             </Position>
           </SectionContainer>
         </Background>
       </Padding>
-      <SectionContainer css={{ pos: 'relative' }}>
-        {/* consider constraining main content to around 850px */}
+      <SectionContainer css={{ pos: 'relative' }} id='Portfolio'>
         <Space h='sp-xl' />
         <Column gap={{ base: '70px', lg: '140px' }}>
           {projectsData.map((project) => (
@@ -68,9 +73,8 @@ export default function HomeContent() {
           ))}
         </Column>
         <Space h='sp-md' />
-        <Space h='sp-lg' />
       </SectionContainer>
-      <Space h='sp-lg' />
+      <Space h={{ base: '0', sm: 'sp-lg' }} />
       <Footer />
     </>
   )

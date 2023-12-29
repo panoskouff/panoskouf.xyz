@@ -1,10 +1,9 @@
 import { Space, Text } from '#/atoms'
 import { ButtonLink } from '#/components/ButtonLink'
+import { createMarkup } from '#/utils'
 import { HeroHighlight } from '../types/data'
 
-type HeroHighlightIntroProps = HeroHighlight & {
-  ctaUrl?: string
-}
+type HeroHighlightIntroProps = HeroHighlight
 
 export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
   title,
@@ -12,28 +11,22 @@ export const HeroHighlightIntro: React.FC<HeroHighlightIntroProps> = ({
   cta,
   ctaUrl = '#',
 }) => {
-  const createMarkup = () => {
-    return { __html: description }
-  }
-
   return (
     <>
       <Text
         as='h1'
         textStyle='title'
         color='text-color-primary'
-        css={{ whiteSpace: 'pre-line' }}
-      >
-        {title}
-      </Text>
+        dangerouslySetInnerHTML={createMarkup(title)}
+      />
       <Space h='sp-sm' />
       <Text
         as='p'
         textStyle='body'
-        fontSize={{ base: '16px', md: '18px' }}
-        lineHeight={{ base: '24px', md: '32px' }}
+        fontSize={{ base: '16px', sm: '18px' }}
+        lineHeight={{ base: '24px', sm: '32px' }}
         css={{ maxWidth: 600, whiteSpace: 'pre-line' }}
-        dangerouslySetInnerHTML={createMarkup()}
+        dangerouslySetInnerHTML={createMarkup(description)}
       />
       <Space h='sp-xs' />
       <Space />
