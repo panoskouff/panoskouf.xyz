@@ -37,7 +37,6 @@ export const HamburgerIcon: React.FC<Props> = ({
   </styled.svg>
 )
 
-// width="448" height="512"
 export const GithubIcon: React.FC<Props> = ({
   fill = '#A86464',
   width = '24px',

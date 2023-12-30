@@ -31,7 +31,7 @@ export const Navigation = () => {
           <TextLink href='/#Portfolio'>my work</TextLink>
           {/* <TextLink href='mailto:me@panoskouf.xyz'>get in touch</TextLink> */}
           <TextLink href='/contact'>get in touch</TextLink>
-          <TextLink href='/cv.html'>📃CV</TextLink>
+          <TextLink href='/cv'>📃CV</TextLink>
         </Row>
         <HamburgerIcon
           hideFrom='md'
@@ -71,7 +71,7 @@ export const Navigation = () => {
                     <TextLink variant href='/contact'>
                       get in touch
                     </TextLink>
-                    <TextLink variant href='/cv.html'>
+                    <TextLink variant href='/cv'>
                       📃CV
                     </TextLink>
                   </Column>

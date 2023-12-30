@@ -8,13 +8,14 @@
 - add mobile navigation
 - fix homepage hero description text not breaking correctly - maybe use https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
 
-- make all pages responsive
-- add responsive header
-- add SEO
+- update content
+- deploy
+- link domain name
+  
+- add favicon and SEO
 - add feedback form that connects to google sheets
+- fix snap position of first element project highlight card on scroll
 - research/config image hosting site and use responsive optimized images
 - add google analytics
-- fix all layouts similar to contact page layout
-- check if next fixed the bug in layouts that didn't allow nesting to work
-- @todo check if all vh amounts look fine on different screen heights
-- @todo different and simpler hero for homepage
+- better layouts ?
+- @todo replace all vh amounts with px look fine on different screen heights
