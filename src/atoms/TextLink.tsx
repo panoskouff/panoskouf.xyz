@@ -8,6 +8,7 @@ import clsx from 'clsx'
 
 // @todo add this to test styles definitions ?
 const textLink = css({
+  display: 'inline-block',
   fontSize: '18px',
   fontWeight: 700,
   color: 'text-color-secondary',

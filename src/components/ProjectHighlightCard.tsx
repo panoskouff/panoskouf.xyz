@@ -40,7 +40,12 @@ export const ProjectHighlightCard: React.FC<Props> = ({
     {...rest}
   >
     <Container w={{ base: '100%', md: '55%' }} css={{ alignSelf: 'center' }}>
-      <Text as='h4' textStyle='caption' color='text-color-tertiary'>
+      <Text
+        as='h4'
+        textStyle='caption'
+        color='text-color-tertiary'
+        fontWeight={700}
+      >
         {kicker}
       </Text>
       <Space h='sp-xs' />

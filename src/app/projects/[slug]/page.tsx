@@ -28,7 +28,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return <div>There is not a project with this slug</div>
   }
 
-  const { title, description, projectUrl, githubUrl, image } = project
+  const {
+    title,
+    description,
+    projectCTA,
+    projectUrl,
+    githubUrl,
+    image,
+    kicker,
+  } = project
 
   return (
     <MainLayout
@@ -36,9 +44,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <>
           <styled.div h='15vh' />
           <ProjectHighlightIntro
+            kicker={kicker}
             title={title}
             description={description}
+            projectCTA={projectCTA}
             projectUrl={projectUrl}
+            githubUrl={githubUrl}
           />
           <Space h='sp-lg' />
           <Position

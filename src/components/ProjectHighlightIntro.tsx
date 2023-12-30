@@ -1,9 +1,11 @@
 import { TextAlign, Text, Space, TextLink } from '#/atoms'
 import { ProjectHighlight } from '../types/data'
+import Link from 'next/link'
+import { GithubIcon } from './Icon'
 
 type ProjectHighlightIntroProps = Pick<
   ProjectHighlight,
-  'kicker' | 'title' | 'description' | 'projectUrl' | 'projectCTA'
+  'kicker' | 'title' | 'description' | 'projectUrl' | 'projectCTA' | 'githubUrl'
 >
 
 // @todo is it a better practice to have default values
@@ -14,13 +16,19 @@ export const ProjectHighlightIntro: React.FC<ProjectHighlightIntroProps> = ({
   description,
   projectUrl,
   projectCTA,
+  githubUrl,
 }) => (
   <TextAlign textAlign='center'>
-    <Text as='h4' textStyle='caption' color='text-color-tertiary'>
+    <Text
+      as='h4'
+      textStyle='caption'
+      color='text-color-tertiary'
+      fontWeight={700}
+    >
       {kicker}
     </Text>
     <Space h='sp-xs' />
-    <Text as='h1' textStyle='title'>
+    <Text as='h1' textStyle='title' fontSize={42}>
       {title}
     </Text>
     <Space h='sp-sm' />
@@ -28,8 +36,16 @@ export const ProjectHighlightIntro: React.FC<ProjectHighlightIntroProps> = ({
       {description}
     </Text>
     <Space h='sp-sm' />
-    <TextLink href={projectUrl} openInNewTab>
-      {projectCTA}
-    </TextLink>
+    {githubUrl && (
+      <Link href={githubUrl} target='_blank' rel='noopener noreferrer'>
+        <GithubIcon width='28px' height='32px' />
+      </Link>
+    )}
+    <Space h='sp-sm' />
+    {projectCTA && projectUrl && (
+      <TextLink href={projectUrl} openInNewTab>
+        {projectCTA}
+      </TextLink>
+    )}
   </TextAlign>
 )
