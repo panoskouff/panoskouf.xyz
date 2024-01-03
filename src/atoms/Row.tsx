@@ -12,7 +12,7 @@ export type RowProps = PandaDivProps<
 >;
 
 export const Row: React.FC<RowProps> = ({ children, ...rest }) => (
-  <Flex alignItems='center' {...rest}>
+  <Flex alignItems='center' flexWrap='wrap' {...rest}>
     {children}
   </Flex>
 )

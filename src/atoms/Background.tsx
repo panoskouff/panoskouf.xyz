@@ -14,6 +14,8 @@ export type BackgroundProps = PandaDivProps<
   | 'backgroundAttachment'
   | 'backgroundOrigin'
   | 'rounded'
+  | 'h'
+  | 'w'
   | 'css'
 >
 

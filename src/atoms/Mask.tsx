@@ -1,11 +1,17 @@
 import { PandaDivProps } from '#/types'
-import { styled } from '../styled-system/jsx'
+import { Container, type ContainerProps } from './Container'
 
-export type MaskProps = PandaDivProps<'pos' | 'w' | 'h' | 'css'>
+export type MaskProps = ContainerProps & PandaDivProps<'pos' | 'overflow'>
 
-export const Mask: React.FC<MaskProps> = ({ children, ...rest }) => (
-  // can I skip position attribute here ?
-  <styled.div pos='relative' overflow='hidden' {...rest}>
+// @todo should mask be responsible for position ?
+export const Mask: React.FC<MaskProps> = ({
+  children,
+  pos = 'relative',
+  overflow = 'hidden',
+  css,
+  ...rest
+}) => (
+  <Container css={{ pos, overflow, ...css }} {...rest}>
     {children}
-  </styled.div>
+  </Container>
 )
