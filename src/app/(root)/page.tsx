@@ -6,7 +6,7 @@ import { HeroHighlightIntro } from '#/components/HeroHighlightIntro'
 import { ScrollIndicator } from '#/components/ScrollIndicator'
 import { styled } from '#/styled-system/jsx'
 import { homeHero as heroData } from '#/app/api/data'
-import { ProjectHighlightCard } from '#/components/ProjectHighlightCard'
+import { ProjectHighlightCard } from '#/components/project-highlight-card/ProjectHighlightCard'
 import { projects as projectsData } from '#/app/api/data'
 
 // @todo - these fail to compile correctly if I make changes to panda.config.ts
@@ -49,15 +49,17 @@ export default function HomeContent() {
             <Position pos='relative' css={{ minH: 'calc(100vh - 48px)' }}>
               <Space h='24px' />
               <Navigation />
-              {/* @todo change vh to px */}
-              <styled.div h={{ base: '5vh', md: '15vh' }} />
+              <styled.div h={{ base: '30px', md: '90px' }} />
               <HeroHighlightIntro {...heroData} />
               <AbsolutelyPlacedScrollIndicator />
             </Position>
           </SectionContainer>
         </Background>
       </Padding>
-      <SectionContainer css={{ pos: 'relative' }} id='Portfolio'>
+      <SectionContainer
+        css={{ pos: 'relative', scrollMarginTop: '-50px' }}
+        id='Portfolio'
+      >
         <Space h='sp-xl' />
         <Column gap={{ base: '70px', lg: '140px' }}>
           {projectsData.map((project) => (

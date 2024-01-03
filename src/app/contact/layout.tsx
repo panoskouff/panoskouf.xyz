@@ -37,7 +37,6 @@ export default function ContactLayout({
               <Navigation />
               <RemainingHeightContainer>{children}</RemainingHeightContainer>
               <Space h='sp-lg' />
-              {/* @todo fix footer */}
               <Footer />
             </ColumnFullHeightWrapper>
           </Position>

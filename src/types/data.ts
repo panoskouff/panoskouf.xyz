@@ -7,6 +7,15 @@ export type HeroHighlight = {
   ctaUrl: string
 }
 
+export type ProjectHighlightCardProps = {
+  kicker?: string
+  title: string
+  description: string
+  projectUrl: string
+  imageUrl: string
+  tags: { id: string; text: string }[]
+}
+
 // @todo see which of these need to be required
 export type ProjectHighlight = {
   slug?: string

@@ -1,21 +1,21 @@
-### project route
+### Todo
 
-- decide on hero copy and fix responsive hero text font size
-- add shadow to project image
-- fix project highlight dot exceeding component's width causing misalignment on column layouts
-  
-- Background component should be renamed and merged with Container and also have box shadow and border options - or add container additionally ?
-- add mobile navigation
-- fix homepage hero description text not breaking correctly - maybe use https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr
-
+- copy images from old website to the new one
 - update content
 - deploy
 - link domain name
   
-- add favicon and SEO
+
+- optimize lighthouse
 - add feedback form that connects to google sheets
-- fix snap position of first element project highlight card on scroll
 - research/config image hosting site and use responsive optimized images
 - add google analytics
 - better layouts ?
 - @todo replace all vh amounts with px look fine on different screen heights
+- add SEO for each page
+- add stagger animations
+- add custom highlight colors
+- add nice console print 
+
+
+metadata.metadataBase is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
