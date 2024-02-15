@@ -19,7 +19,10 @@ export const ProjectHighlightCard: React.FC<Props> = ({
     flexDirection={{ base: 'column', md: 'row' }}
     css={{ flexGrow: 1 }}
   >
-    <Container w={{ base: '100%', md: '55%' }} css={{ alignSelf: 'center' }}>
+    <Container
+      w={{ base: '100%', md: '55%', lg: '50%' }}
+      css={{ alignSelf: 'center' }}
+    >
       <ProjectHighlightCardCTASection
         kicker={kicker}
         title={title}
@@ -28,7 +31,10 @@ export const ProjectHighlightCard: React.FC<Props> = ({
         tags={tags}
       />
     </Container>
-    <Container w={{ base: '100%', md: '45%' }} css={{ alignSelf: 'center' }}>
+    <Container
+      w={{ base: '100%', md: '45%', lg: '50%' }}
+      css={{ alignSelf: 'center' }}
+    >
       <ProjectHighlightCardImageSection
         projectUrl={projectUrl}
         imageUrl={imageUrl}

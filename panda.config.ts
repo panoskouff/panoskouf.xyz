@@ -42,8 +42,8 @@ export default defineConfig({
         'text-color-tertiary': { value: '#b7b4b9' },
       },
       sizes: {
-        'hero-max-width': { value: '800px' },
-        'section-max-width': { value: '800px' },
+        'hero-max-width': { value: '1300px' },
+        'section-max-width': { value: '1300px' },
       },
       spacing: {
         // padding

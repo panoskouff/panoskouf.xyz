@@ -42,7 +42,7 @@ export const textStyles = defineTextStyles({
       ...styles.base.value,
       fontFamily: 'tinos',
       lineHeight: '120%',
-      fontSize: { base: '36px', sm: '7vh', md: '50px' },
+      fontSize: { base: '36px', sm: '54px', lg: '60px' },
     },
   },
   'title-secondary': {

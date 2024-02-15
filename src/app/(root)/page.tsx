@@ -47,9 +47,9 @@ export default function HomeContent() {
         <Background bg='bg-color-secondary' rounded='16px'>
           <SectionContainer maxW='hero-max-width' css={{ flexGrow: 1 }}>
             <Position pos='relative' css={{ minH: 'calc(100vh - 48px)' }}>
-              <Space h='24px' />
+              <Space h={{ base: '24px', lg: '32px' }} />
               <Navigation />
-              <styled.div h={{ base: '30px', md: '90px' }} />
+              <styled.div h={{ base: '30px', md: '90px', lg: '140px' }} />
               <HeroHighlightIntro {...heroData} />
               <AbsolutelyPlacedScrollIndicator />
             </Position>

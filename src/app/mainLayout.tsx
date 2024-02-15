@@ -10,6 +10,9 @@ const expanded = {
   left: 0,
 }
 
+/* @todo fix 24px padding offset overlaping with page max-width container
+where as it doesn't in home page */
+
 /* we need to do this because Next.js doesn't support
   having a layout with parallel routes in a grouped route */
 export default function MainLayout({
@@ -33,8 +36,7 @@ export default function MainLayout({
         </Position>
         <SectionContainer css={{ h: '100%', flexGrow: 1 }}>
           <Position pos='relative' css={{ h: '100%' }}>
-            {/* @todo check if space above navigation is correct here */}
-            <Space h='48px' />
+            <Space h={{ base: '48px', lg: '56px' }} />
             <Navigation />
             {hero}
           </Position>
